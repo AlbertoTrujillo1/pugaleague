@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de la Puga League</title>
+    <title>Puga League - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>Bienvenido a la Puga League</h1>
+    <h1>Pagina Oficial de la Puga League</h1>
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pilotos.html">Nuestros Pilotos</a></li>
+            <li><a href="repeticiones.html">Repeticiones</a></li>
+        </ul>
+    </nav>
 </header>
 
 <div class="container">
@@ -136,6 +144,17 @@
         </div>
     </section>
 </div>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+</script>
 
 </body>
 </html>
