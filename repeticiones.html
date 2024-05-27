@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeticiones de la Puga League</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Repeticiones de la Puga League</h1>
+    <nav>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pilotos.html">Nuestros Pilotos</a></li>
+            <li><a href="repeticiones.html">Repeticiones</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <section class="section">
+        <h2>Carreras Repetidas</h2>
+        <div class="section-content">
+            <div class="video-container">
+                <iframe src="https://www.twitch.tv/videos/2155639742" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+                <iframe src="https://player.twitch.tv/2155639742=pugleague.es" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+                <!-- Agrega más iframes según sea necesario -->
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        if (menu.style.display === "block") {
+            menu.style.display = "none";
+        } else {
+            menu.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
