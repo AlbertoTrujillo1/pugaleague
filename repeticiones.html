@@ -6,6 +6,52 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Puga League - Repeticiones</title>
     <style>
+        .caster {
+    text-align: center;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
+    width: 100%; /* Añadido para que ocupe todo el ancho */
+}
+
+.caster h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.caster-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.caster-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.caster-details {
+    max-width: 600px;
+    text-align: left;
+}
+
+.caster-details h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.caster-details p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
         /* Estilos globales */
         body {
             font-family: Arial, sans-serif;
@@ -52,10 +98,9 @@
             background-color: #f7b932; /* Naranja */
             color: #333; /* Texto gris oscuro */
         }
-
         .container {
             max-width: 1200px;
-            margin: 50px auto;
+            margin: 0 auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
@@ -69,7 +114,7 @@
             flex: 1;
             max-width: 300px;
             margin: 10px;
-            padding: 10px;
+            padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
             text-align: center;
@@ -81,9 +126,26 @@
         }
 
         .description {
-            font-size: 14px;
+            font-size: 16px;
             color: #666;
+            line-height: 1.5;
         }
+
+        .section-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .caster-container {
+            width: 100%;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -93,7 +155,7 @@
 </header>
 
 <nav>
-    <ul>
+    <ul class="menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="pilotos.html">Nuestros Pilotos</a></li>
         <li><a href="repeticiones.html">Repeticiones</a></li>
@@ -102,13 +164,27 @@
     </ul>
 </nav>
 
+<div class="caster">
+    <h2>comentaristas</h2>
+    <div class="caster-info">
+        <img src="caster.png" alt="Sergio" class="caster-image">
+        <div class="caster-details">
+            <h3>Sergio</h3>
+            <p>Sergio es uno de nuestros principales comentaristas en la Puga League. Con una amplia experiencia en el mundo del automovilismo y su pasión por las carreras virtuales, Sergio brinda comentarios emocionantes y análisis experto durante nuestras transmisiones en vivo. Su capacidad para explicar estrategias y detalles técnicos hacen que las carreras sean aún más emocionantes para nuestros espectadores.</p>
+            <p>Además de ser un comentarista talentoso, Sergio también ha competido en numerosas ligas de simulación de carreras como la bydaviz top gun o la anterior puga league, lo que le brinda una perspectiva única sobre el mundo de las carreras virtuales.</p>
+        </div>
+    </div>
+</div>
+
+
 <div class="container">
     <!-- Bandera de Japón -->
     <div class="flag-container">
         <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
             <img src="japon.png" alt="Bandera de Japón">
         </a>
-        <p class="description">Circuito de Suzuka: Desafiante y emblemático trazado japonés.</p>
+        <h2>Circuito de Suzuka</h2>
+        <p class="description">Desafiante y emblemático trazado japonés. Suzuka es famoso por su combinación de curvas rápidas y lentas, así como por su famosa "S" de alta velocidad y la chicane de la "Casa del Mago". Es un circuito exigente que pone a prueba las habilidades de los pilotos y es un favorito entre muchos fanáticos de la Fórmula 1.</p>
     </div>
 
     <!-- Bandera de China -->
@@ -116,7 +192,7 @@
         <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
             <img src="china.png" alt="Bandera de China">
         </a>
-        <p class="description">Circuito Internacional de Shanghai: Conocido por su larga recta y complejas curvas.</p>
+        <p class="description">Conocido por su larga recta y complejas curvas, el Circuito Internacional de Shanghai ofrece desafíos únicos para los pilotos de Fórmula 1. Su diseño único, que incorpora elementos de la cultura china, lo convierte en una experiencia emocionante tanto para los pilotos como para los espectadores.</p>
     </div>
 
     <!-- Bandera de Miami -->
@@ -124,7 +200,8 @@
         <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
             <img src="eeu.png" alt="Bandera de Miami">
         </a>
-        <p class="description">Circuito de Miami: Circuito urbano que mezcla la velocidad con las exigencias técnicas.</p>
+        <h2>Circuito de Miami</h2>
+        <p class="description">El Circuito de Miami es un circuito urbano que mezcla la velocidad con las exigencias técnicas. Con vistas al océano y pasando por algunos de los lugares más emblemáticos de la ciudad, ofrece una experiencia única tanto para los pilotos como para los espectadores.</p>
     </div>
 
     <!-- Bandera de Imola -->
@@ -132,5 +209,9 @@
         <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
             <img src="italia.png" alt="Bandera de Imola">
         </a>
-        <p class="description">Autódromo Enzo y Dino Ferrari: Clásico y desafiante circuito italiano.</p>
+        <h2>Autódromo Enzo y Dino Ferrari</h2>
+        <p class="description">Clásico y desafiante circuito italiano, el Autódromo Enzo y Dino Ferrari, comúnmente conocido como Imola, es un circuito lleno de historia y emoción. Su diseño serpenteante y su atmósfera única lo convierten en un favorito entre muchos fanáticos de la Fórmula 1.</p>
     </div>
+</div>
+</body>
+</html>
