@@ -71,7 +71,7 @@
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 48%; /* Ajustar el ancho de cada sección */
+            width: 100%; /* Ajustar el ancho de cada sección */
             box-sizing: border-box; /* Considerar el padding y borde en el ancho */
         }
 
@@ -85,6 +85,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            flex-direction: row; /* Alinear elementos en una fila */
         }
 
         .pilot {
@@ -99,7 +100,8 @@
         }
 
         .pilot img {
-            width: 200px; /* Ancho de imagen */
+            width: 100%; /* Ancho de imagen */
+            max-width: 200px; /* Ancho máximo de la imagen */
             border-radius: 8px;
             margin-bottom: 0.5rem;
         }
