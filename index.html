@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Oficial de la Puga League</title>
+    <title>Puga League - Home</title>
     <style>
         /* Estilos globales */
         body {
@@ -30,15 +30,13 @@
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         nav ul li {
-            display: inline;
-            margin-right: 1rem;
-        }
-
-        nav ul li:last-child {
-            margin-right: 0;
+            margin: 0.5rem;
         }
 
         nav ul li a {
@@ -73,81 +71,95 @@
             border-bottom: 2px solid #333; /* Borde inferior gris oscuro */
             padding-bottom: 0.5rem;
             color: #333; /* Texto gris oscuro */
+            text-align: center;
         }
 
         .section-content {
             margin-top: 1rem;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .pilot {
-            background-color: #f9f9f9; /* Fondo gris claro */
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            margin-bottom: 1rem;
-            width: calc(50% - 1rem); /* Ajuste de tamaño para cada piloto */
-        }
-
-        .pilot img {
+        .image-container {
             width: 100%;
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .pilot h3 {
-            margin-bottom: 0.5rem;
+        .image-container img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
         }
-        /* Estilo para el calendario */
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
 
         table th, table td {
-            border: 1px solid #ddd; /* Borde gris claro */
             padding: 0.5rem;
+            border: 1px solid #ddd;
             text-align: left;
         }
 
         table th {
             background-color: #f7b932; /* Naranja */
-            color: #333; /* Texto gris oscuro */
+            color: white;
         }
 
-        table tbody tr:nth-child(even) {
-            background-color: #f9f9f9; /* Fondo gris claro para filas pares */
-        }
+        @media (max-width: 768px) {
+            .section-content {
+                flex-direction: column;
+            }
 
-        table tbody tr:hover {
-            background-color: #f0f0f0; /* Fondo gris más claro al pasar el ratón */
+            table th, table td {
+                font-size: 0.9rem;
+            }
+
+            nav ul li {
+                margin: 0.2rem;
+            }
+
+            nav ul li a {
+                padding: 0.3rem 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Página Oficial de la Puga League</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pilotos.html">Nuestros Pilotos</a></li>
-            <li><a href="repeticiones.html">Repeticiones</a></li>
-            <li><a href="reglamento.html">Reglamento</a></li>
-        </ul>
-    </nav>
+    <h1>Pagina Oficial de la Puga League</h1>
 </header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pilotos.html">Nuestros Pilotos</a></li>
+        <li><a href="repeticiones.html">Repeticiones</a></li>
+        <li><a href="reglamento.html">Reglamento</a></li>
+    </ul>
+</nav>
 
 <div class="container">
     <section class="section">
-        <h2>Mundial de Constructores y Pilotos</h2>
+        <h2>Mundial de Pilotos</h2>
         <div class="section-content">
             <div class="image-container">
-                <img src="drivers1.png" alt="Drivers 1">
+                <img src="image (1).png" alt="Drivers 1">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Mundial de Constructores</h2>
+        <div class="section-content">
+            <div class="image-container">
                 <img src="constructores.png" alt="Constructores">
             </div>
         </div>
@@ -266,17 +278,6 @@
         </div>
     </section>
 </div>
-
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("menu");
-        if (menu.style.display === "block") {
-            menu.style.display = "none";
-        } else {
-            menu.style.display = "block";
-        }
-    }
-</script>
 
 </body>
 </html>
