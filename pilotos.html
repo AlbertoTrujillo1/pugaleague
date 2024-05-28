@@ -4,21 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestros Pilotos - Puga League</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Fondo gris claro */
+            color: #333; /* Texto gris oscuro */
+        }
+
+        header {
+            background-color: #f7b932; /* Naranja */
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav {
+            background-color: #333; /* Fondo negro */
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 1rem;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff; /* Texto blanco */
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #f7b932; /* Naranja */
+            color: #333; /* Texto gris oscuro */
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 1rem;
+        }
+
+        .section {
+            background-color: white;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #333; /* Borde inferior gris oscuro */
+            padding-bottom: 0.5rem;
+            color: #333; /* Texto gris oscuro */
+        }
+
+        .section-content {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .pilot {
+            background-color: #f9f9f9; /* Fondo gris claro */
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 1rem;
+            width: calc(50% - 1rem); /* Ajuste de tamaño para cada piloto */
+        }
+
+        .pilot img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .pilot h3 {
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
 
 <header>
     <h1>Nuestros Pilotos</h1>
-    <nav>
-        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <ul id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pilotos.html">Nuestros Pilotos</a></li>
-            <li><a href="repeticiones.html">Repeticiones</a></li>
-        </ul>
-    </nav>
 </header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pilotos.html">Nuestros Pilotos</a></li>
+        <li><a href="repeticiones.html">Repeticiones</a></li>
+    </ul>
+</nav>
 
 <div class="container">
     <section class="section">
@@ -153,10 +250,6 @@
             <div class="pilot">
                 <img src="foto19.png" alt="Foto de Petesupremo">
                 <p><strong>Petesupremo</strong></p>
-            </div>
-            <div class="pilot">
-                <img src="foto20.png" alt="Foto de Munteras">
-                <p><strong>Munteras</strong></p>
             </div>
         </div>
     </section>
