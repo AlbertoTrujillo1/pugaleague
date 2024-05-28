@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>Repeticiones - Puga League</title>
+    <title>Puga League - Repeticiones</title>
     <style>
         /* Estilos globales */
         body {
@@ -19,47 +19,6 @@
             background-color: #f7b932; /* Naranja */
             text-align: center;
             padding: 1rem 0;
-        }
-
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            max-width: 1200px;
-            padding: 1rem;
-        }
-
-        .section {
-            background-color: white;
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section h2 {
-            border-bottom: 2px solid #333; /* Borde inferior gris oscuro */
-            padding-bottom: 0.5rem;
-            color: #333; /* Texto gris oscuro */
-        }
-
-        .section-content {
-            margin-top: 1rem;
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 */
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
         }
 
         nav {
@@ -93,12 +52,44 @@
             background-color: #f7b932; /* Naranja */
             color: #333; /* Texto gris oscuro */
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .flag-container {
+            flex: 1;
+            max-width: 300px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .flag-container img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #666;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Repeticiones de la Puga League</h1>
+    <h1>Repeticiones</h1>
 </header>
 
 <nav>
@@ -112,15 +103,34 @@
 </nav>
 
 <div class="container">
-    <section class="section">
-        <h2>Carreras Repetidas</h2>
-        <div class="section-content">
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TnmMvQdwqM4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-</div>
+    <!-- Bandera de Japón -->
+    <div class="flag-container">
+        <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
+            <img src="japon.png" alt="Bandera de Japón">
+        </a>
+        <p class="description">Circuito de Suzuka: Desafiante y emblemático trazado japonés.</p>
+    </div>
 
-</body>
-</html>
+    <!-- Bandera de China -->
+    <div class="flag-container">
+        <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
+            <img src="china.png" alt="Bandera de China">
+        </a>
+        <p class="description">Circuito Internacional de Shanghai: Conocido por su larga recta y complejas curvas.</p>
+    </div>
+
+    <!-- Bandera de Miami -->
+    <div class="flag-container">
+        <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
+            <img src="eeu.png" alt="Bandera de Miami">
+        </a>
+        <p class="description">Circuito de Miami: Circuito urbano que mezcla la velocidad con las exigencias técnicas.</p>
+    </div>
+
+    <!-- Bandera de Imola -->
+    <div class="flag-container">
+        <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
+            <img src="italia.png" alt="Bandera de Imola">
+        </a>
+        <p class="description">Autódromo Enzo y Dino Ferrari: Clásico y desafiante circuito italiano.</p>
+    </div>
