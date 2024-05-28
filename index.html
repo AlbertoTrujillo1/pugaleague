@@ -5,192 +5,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Puga League - Home</title>
-    <style>
-        /* Estilos globales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0; /* Fondo gris claro */
-            color: #333; /* Texto gris oscuro */
-        }
-
-        header {
-            background-color: #f7b932; /* Naranja */
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        img {
-            display: block;
-            margin: 0 auto 20px;
-        }
-
-        h1, h2 {
-            text-align: center;
-        }
-
-        p {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .button {
-            display: block;
-            width: 200px;
-            margin: 0 auto;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 14px;
-            color: #666;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0; /* Fondo gris claro */
-            color: #333; /* Texto gris oscuro */
-        }
-
-        header {
-            background-color: #f7b932; /* Naranja */
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        nav {
-            background-color: #333; /* Fondo negro */
-            padding: 0.5rem 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav ul li {
-            margin: 0.5rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff; /* Texto blanco */
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #f7b932; /* Naranja */
-            color: #333; /* Texto gris oscuro */
-        }
-
-        .section {
-            background-color: white;
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section h2 {
-            border-bottom: 2px solid #333; /* Borde inferior gris oscuro */
-            padding-bottom: 0.5rem;
-            color: #333; /* Texto gris oscuro */
-            text-align: center;
-        }
-
-        .section-content {
-            margin-top: 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .image-container {
-            width: 100%;
-            max-width: 600px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 1rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 1rem;
-        }
-
-        table th, table td {
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-
-        table th {
-            background-color: #f7b932; /* Naranja */
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .section-content {
-                flex-direction: column;
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <title>Puga League - Home</title>
+        <style>
+            /* Estilos globales */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0; /* Fondo gris claro */
+                color: #333; /* Texto gris oscuro */
             }
-
-            table th, table td {
-                font-size: 0.9rem;
+    
+            header {
+                background-color: #f7b932; /* Naranja */
+                text-align: center;
+                padding: 1rem 0;
             }
-
+    
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+    
+            .container {
+                max-width: 800px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            img {
+                display: block;
+                margin: 0 auto 20px;
+            }
+    
+            h1, h2 {
+                text-align: center;
+            }
+    
+            p {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            .button {
+                display: block;
+                width: 200px;
+                margin: 0 auto;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+    
+            .button:hover {
+                background-color: #0056b3;
+            }
+    
+            .footer {
+                text-align: center;
+                margin-top: 50px;
+                font-size: 14px;
+                color: #666;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0; /* Fondo gris claro */
+                color: #333; /* Texto gris oscuro */
+            }
+    
+            header {
+                background-color: #f7b932; /* Naranja */
+                text-align: center;
+                padding: 1rem 0;
+            }
+    
+            nav {
+                background-color: #333; /* Fondo negro */
+                padding: 0.5rem 0;
+                text-align: center;
+            }
+    
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+    
             nav ul li {
-                margin: 0.2rem;
+                margin: 0.5rem;
             }
-
+    
             nav ul li a {
-                padding: 0.3rem 0.5rem;
+                text-decoration: none;
+                color: #fff; /* Texto blanco */
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                transition: background-color 0.3s, color 0.3s;
             }
-        }
-    </style>
+    
+            nav ul li a:hover {
+                background-color: #f7b932; /* Naranja */
+                color: #333; /* Texto gris oscuro */
+            }
+    
+            .section {
+                background-color: white;
+                margin-bottom: 2rem;
+                padding: 1rem;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            .section h2 {
+                border-bottom: 2px solid #333; /* Borde inferior gris oscuro */
+                padding-bottom: 0.5rem;
+                color: #333; /* Texto gris oscuro */
+                text-align: center;
+            }
+    
+            .section-content {
+                margin-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .image-container {
+                width: 100%;
+                max-width: 600px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .image-container img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+            }
+    
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 1rem;
+            }
+    
+            table th, table td {
+                padding: 0.5rem;
+                border: 1px solid #ddd;
+                text-align: left;
+            }
+    
+            table th {
+                background-color: #f7b932; /* Naranja */
+                color: white;
+            }
+    
+            @media (max-width: 768px) {
+                .section-content {
+                    flex-direction: column;
+                }
+    
+                table th, table td {
+                    font-size: 0.9rem;
+                }
+    
+                nav ul li {
+                    margin: 0.2rem;
+                }
+    
+                nav ul li a {
+                    padding: 0.3rem 0.5rem;
+                }
+            }
+        </style>
 </head>
 <body>
 
@@ -228,115 +235,11 @@
     </section>
 
     <section class="section">
-        <h2>Calendario</h2>
+        <h2>calendario PL 2.0</h2>
         <div class="section-content">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Gran Premio</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2 DE MARZO</td>
-                        <td>Sakhir</td>
-                    </tr>
-                    <tr>
-                        <td>9 DE MARZO</td>
-                        <td>Jeddah International Street Circuit</td>
-                    </tr>
-                    <tr>
-                        <td>24 DE MARZO</td>
-                        <td>GP Australia</td>
-                    </tr>
-                    <tr>
-                        <td>7 DE ABRIL</td>
-                        <td>Suzuka</td>
-                    </tr>
-                    <tr>
-                        <td>21 DE ABRIL</td>
-                        <td>Shanghai</td>
-                    </tr>
-                    <tr>
-                        <td>5 DE MAYO</td>
-                        <td>Hard Rock Stadium Circuit</td>
-                    </tr>
-                    <tr>
-                        <td>19 DE MAYO</td>
-                        <td>Imola</td>
-                    </tr>
-                    <tr>
-                        <td>26 DE MAYO</td>
-                        <td>Montecarlo</td>
-                    </tr>
-                    <tr>
-                        <td>9 DE JUNIO</td>
-                        <td>Gilles Villeneuve</td>
-                    </tr>
-                    <tr>
-                        <td>23 DE JUNIO</td>
-                        <td>Barcelona Catalunya</td>
-                    </tr>
-                    <tr>
-                        <td>30 DE JUNIO</td>
-                        <td>Red Bull Ring</td>
-                    </tr>
-                    <tr>
-                        <td>7 DE JULIO</td>
-                        <td>Silverstone</td>
-                    </tr>
-                    <tr>
-                        <td>21 DE JULIO</td>
-                        <td>Hungaroring</td>
-                    </tr>
-                    <tr>
-                        <td>28 DE JULIO</td>
-                        <td>Spa-Francorchamps</td>
-                    </tr>
-                    <tr>
-                        <td>25 DE AGOSTO</td>
-                        <td>Zandvoort</td>
-                    </tr>
-                    <tr>
-                        <td>1 DE SEPTIEMBRE</td>
-                        <td>Monza</td>
-                    </tr>
-                    <tr>
-                        <td>15 DE SEPTIEMBRE</td>
-                        <td>Baku City Circuit</td>
-                    </tr>
-                    <tr>
-                        <td>22 DE SEPTIEMBRE</td>
-                        <td>Marina Bay</td>
-                    </tr>
-                    <tr>
-                        <td>20 DE OCTUBRE</td>
-                        <td>Las Américas</td>
-                    </tr>
-                    <tr>
-                        <td>27 DE OCTUBRE</td>
-                        <td>Hermanos Rodríguez</td>
-                    </tr>
-                    <tr>
-                        <td>3 DE NOVIEMBRE</td>
-                        <td>Interlagos</td>
-                    </tr>
-                    <tr>
-                        <td>24 DE NOVIEMBRE</td>
-                        <td>Las Vegas</td>
-                    </tr>
-                    <tr>
-                        <td>1 DE DICIEMBRE</td>
-                        <td>Losail</td>
-                    </tr>
-                    <tr>
-                        <td>8 DE DICIEMBRE</td>
-                        <td>Yas Marina</td>
-                    </tr>
-                    <!-- Agrega más filas según sea necesario -->
-                </tbody>
-            </table>
+            <div class="image-container">
+                <img src="calendario.jpg" alt="Constructores">
+            </div>
         </div>
     </section>
 </div>
