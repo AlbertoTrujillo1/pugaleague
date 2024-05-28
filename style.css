@@ -11,46 +11,6 @@ header {
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: relative;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 0.5rem;
-    background-color: #444;
-    color: white;
-    border-radius: 4px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #555;
 }
 
 .container {
@@ -75,63 +35,46 @@ nav ul li a:hover {
 
 .section-content {
     margin-top: 1rem;
+}
+
+.image-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     gap: 1rem;
 }
 
-.pilot {
-    flex: 1 1 calc(25% - 1rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.pilot img {
+.image-container img {
     width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media queries para dispositivos móviles */
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
 
-    nav ul {
-        display: none;
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .image-container {
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        text-align: center;
-        z-index: 1000;
-    }
-
-    nav ul li {
-        margin: 0;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 1rem;
-    }
-
-    nav ul li:not(:last-child) {
-        border-bottom: 1px solid #555;
-    }
-
-    #menu.active {
-        display: flex;
+        align-items: center;
     }
 }
-
