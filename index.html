@@ -27,7 +27,7 @@
         header h1 {
             margin: 0;
             padding-left: 1rem;
-            color: #362c2c; /* Texto blanco */
+            color: #ffffff; /* Texto blanco */
             font-size: 1.5rem;
         }
 
@@ -68,43 +68,15 @@
             vertical-align: middle;
         }
 
-        nav {
-            background-color: #333; /* Fondo negro */
-            padding: 0.5rem 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav ul li {
-            margin: 0.5rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff; /* Texto blanco */
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #f7b932; /* Naranja */
-            color: #333333; /* Texto gris oscuro */
-        }
-
         .container {
             width: 90%;
             margin: 0 auto;
             max-width: 1200px;
             padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start; /* Alinear los elementos arriba */
         }
 
         .section {
@@ -113,51 +85,21 @@
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Ocupar todo el ancho */
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: #1f1f1f; /* Fondo gris oscuro */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        .section h2 {
+            font-size: 1.3rem; /* Tamaño de fuente un poco más pequeño */
+        }
+
+        .section-content {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
 
-        .flag-container {
-            flex: 1;
-            max-width: 300px;
-            margin: 10px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-align: center;
-            background-color: #121212; /* Fondo oscuro */
-        }
-
-        .flag-container img {
-            max-width: 100%;
-            margin-bottom: 10px;
-        }
-
-        .description {
-            font-size: 16px;
-            color: #e0e0e0; /* Texto gris claro */
-            line-height: 1.5;
-        }
-
-        .section-title {
-            font-size: 24px;
-            color: #ffffff; /* Texto gris claro */
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        /* Estilos para las nuevas secciones */
-        .events-section, .news-section {
-            margin-top: 50px;
+        img {
+            max-width: 100%; /* Imágenes responsivas */
         }
 
         .event, .news-item {
@@ -174,10 +116,14 @@
         /* Estilos para el contador */
         .countdown {
             text-align: center;
-            font-size: 24px;
+            font-size: 1rem; /* Tamaño de fuente más pequeño */
             margin-top: 20px;
+            padding: 10px; /* Añadir más espacio alrededor del contador */
+            background-color: #1f1f1f; /* Fondo gris oscuro */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        </style>
+    </style>
 </head>
 <body>
 
@@ -205,91 +151,94 @@
         </nav>
     </header>
 
-<div class="container">
-    <section class="section">
-        <h2>Mundial de Pilotos</h2>
-        <div class="section-content">
-            <div class="image-container">
-                <img src="image (1).png" alt="Drivers 1">
+    <div class="container">
+        <section class="section">
+            <h2>Mundial de Pilotos</h2>
+            <div class="section-content">
+                <div class="image-container">
+                    <img src="image (1).png" alt="Drivers 1">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section">
-        <h2>Mundial de Constructores</h2>
-        <div class="section-content">
-            <div class="image-container">
-                <img src="constructores.png" alt="Constructores">
+        <section class="section">
+            <h2>Mundial de Constructores</h2>
+            <div class="section-content">
+                <div class="image-container">
+                    <img src="constructores.png" alt="Constructores">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section">
-        <h2>Calendario PL 2.0</h2>
-        <div class="section-content">
-            <div class="image-container">
-                <img src="calendario.jpg" alt="Calendario">
+        <section class="section">
+            <h2>Calendario PL 2.0</h2>
+            <div class="section-content">
+                <div class="image-container">
+                    <img src="calendario.jpg" alt="Calendario">
+                </div>
             </div>
-        </div>
-    </section><!-- Nuevas secciones -->
-    <section class="events-section">
-        <h2>Próximos Eventos</h2>
-        <div class="event">
-            <h3>Carrera en Montreal</h3>
-            <p>Fecha: 9 de junio, 2024</p>
-            <p>Lugar: Circuito Gilles Villeneuve</p>
-        </div>
-        <!-- Puedes agregar más eventos aquí -->
-    </section>
+        </section>
 
-    <section class="news-section">
-        <h2>Últimas Noticias</h2>
-        <div class="news-item">
-            <h3>Nueva cara en Williams</h3>
-            <p>BREAKING: Daniel ficha como piloto titular por williams</p>
-        </div>
-        <!-- Puedes agregar más noticias aquí -->
-    </section>
+        <!-- Nuevas secciones -->
+        <section class="events-section">
+            <h2>Próximos Eventos</h2>
+            <div class="event">
+                <h3>Carrera en Montreal</h3>
+                <p>Fecha: 9 de junio, 2024</p>
+                <p>Lugar: Circuito Gilles Villeneuve</p>
+            </div>
+            <!-- Puedes agregar más eventos aquí -->
+        </section>
 
-    <!-- Contador hasta el 9 de junio a las 11:00 en Montreal -->
-    <div class="countdown" id="countdown"></div>
-</div>
-
-<script>
-    // Establecer la fecha objetivo (9 de junio de 2024 a las 11:00 en Montreal)
-    const countdownDate = new Date('June 9, 2024 11:00:00').getTime();
-
-    // Actualizar el contador cada segundo
-    const countdown = document.getElementById('countdown');
-
-    const updateCountdown = () => {
-        // Obtener la fecha y hora actual
-        const now = new Date().getTime();
-
-        // Calcular la diferencia entre la fecha objetivo y la fecha actual
-        const difference = countdownDate - now;
-
-        // Calcular días, horas, minutos y segundos restantes
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        // Mostrar el contador en el elemento HTML
-        countdown.innerHTML = `Próxima carrera en ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
-
-        // Si la cuenta regresiva ha terminado, mostrar un mensaje
-        if (difference < 0) {
-            clearInterval(countdownInterval);
-            countdown.innerHTML = "¡La carrera ha comenzado!";
-        }
-    };
-
-    // Actualizar el contador cada segundo
-    const countdownInterval = setInterval(updateCountdown, 1000);
-
-    // Actualizar el contador inicialmente para evitar un retraso de un segundo
-    updateCountdown();
-</script>
-</body>
-</html>
+        <section class="news-section">
+            <h2>Últimas Noticias</h2>
+            <div class="news-item">
+                <h3>Nueva cara en Williams</h3>
+                <p>BREAKING: Daniel ficha como piloto titular por Williams</p>
+            </div>
+            <!-- Puedes agregar más noticias aquí -->
+        </section>
+    
+        <!-- Contador hasta el 9 de junio a las 11:00 en Montreal -->
+        <div class="countdown" id="countdown"></div>
+    </div>
+    
+    <script>
+        // Establecer la fecha objetivo (9 de junio de 2024 a las 11:00 en Montreal)
+        const countdownDate = new Date('June 9, 2024 11:00:00').getTime();
+    
+        // Actualizar el contador cada segundo
+        const countdown = document.getElementById('countdown');
+    
+        const updateCountdown = () => {
+            // Obtener la fecha y hora actual
+            const now = new Date().getTime();
+    
+            // Calcular la diferencia entre la fecha objetivo y la fecha actual
+            const difference = countdownDate - now;
+    
+            // Calcular días, horas, minutos y segundos restantes
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+    
+            // Mostrar el contador en el elemento HTML
+            countdown.innerHTML = `Próxima carrera en ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
+    
+            // Si la cuenta regresiva ha terminado, mostrar un mensaje
+            if (difference < 0) {
+                clearInterval(countdownInterval);
+                countdown.innerHTML = "¡La carrera ha comenzado!";
+            }
+        };
+    
+        // Actualizar el contador cada segundo
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    
+        // Actualizar el contador inicialmente para evitar un retraso de un segundo
+        updateCountdown();
+    </script>
+    </body>
+    </html>
+    
