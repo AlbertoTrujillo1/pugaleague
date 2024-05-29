@@ -8,23 +8,32 @@
     <style>
         /* Estilos globales */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Fondo gris claro */
-            color: #333; /* Texto gris oscuro */
+            background-color: #121212; /* Fondo oscuro */
+            color: #e0e0e0; /* Texto gris claro */
         }
 
         header {
-            background-color: #f7b932; /* Naranja */
-            text-align: center;
+            background-color: #1f1f1f; /* Fondo gris oscuro */
             padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            padding-left: 1rem;
+            color: #ffffff; /* Naranja */
+            font-size: 1.5rem;
         }
 
         nav {
-            background-color: #333; /* Fondo negro */
-            padding: 0.5rem 0;
-            text-align: center;
+            text-align: right;
+            padding: 0.5rem 1rem;
         }
 
         nav ul {
@@ -32,17 +41,16 @@
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+            align-items: center;
         }
 
         nav ul li {
-            margin: 0.5rem;
+            margin: 0 0.5rem;
         }
 
         nav ul li a {
             text-decoration: none;
-            color: #fff; /* Texto blanco */
+            color: #e0e0e0; /* Texto gris claro */
             padding: 0.5rem 1rem;
             border-radius: 4px;
             transition: background-color 0.3s, color 0.3s;
@@ -50,12 +58,19 @@
 
         nav ul li a:hover {
             background-color: #f7b932; /* Naranja */
-            color: #333; /* Texto gris oscuro */
+            color: #121212; /* Texto oscuro */
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            margin: 0 0.5rem;
+            vertical-align: middle;
         }
 
         .container {
             width: 90%;
-            margin: 0 auto;
+            margin: 2rem auto;
             max-width: 1200px;
             padding: 1rem;
             display: flex;
@@ -64,19 +79,19 @@
         }
 
         .section {
-            background-color: white;
+            background-color: #1f1f1f;
             margin-bottom: 2rem;
             padding: 1rem;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             width: 100%;
             box-sizing: border-box;
         }
 
         .section h2 {
-            border-bottom: 2px solid #333; /* Borde inferior gris oscuro */
+            border-bottom: 2px solid #ffffff; /* Borde inferior naranja */
             padding-bottom: 0.5rem;
-            color: #333;
+            color: #ffffff;
         }
 
         .section-content {
@@ -92,7 +107,8 @@
             margin-bottom: 1rem;
             width: 48%;
             box-sizing: border-box;
-            background-color: #fff;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .pilot img {
@@ -106,10 +122,10 @@
         }
 
         .pilot p {
-            background-color: #fff;
+            background-color: #000000;
             padding: 0.5rem;
             border-radius: 8px;
-            border: 2px solid #fff;
+            border: 2px solid #ffffff;
         }
 
         details {
@@ -122,7 +138,7 @@
             background-color: #f7b932;
             padding: 0.5rem;
             border-radius: 4px;
-            color: #333;
+            color: #121212;
         }
 
         details[open] summary {
@@ -132,9 +148,9 @@
 
         details .info {
             padding: 0.5rem;
-            border: 1px solid #333;
+            border: 1px solid #ffffff;
             border-radius: 4px;
-            background-color: #fff;
+            background-color: #ffffff;
         }
 
         /* Estilos de colores para cada escudería */
@@ -177,19 +193,6 @@
         .haas {
             background-color: #B6BABD; /* Haas */
         }
-        /* Estilos para la sección de búsqueda */
-.busqueda {
-    background-color: #fff;
-    margin-bottom: 1rem;
-}
-
-.busqueda input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
 
     </style>
 </head>
@@ -197,17 +200,29 @@
 
 <header>
     <h1>Nuestros Pilotos</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pilotos.html">Nuestros Pilotos</a></li>
+            <li><a href="repeticiones.html">Repeticiones</a></li>
+            <li><a href="reglamento.html">Reglamento</a></li>
+            <li><a href="nuevospilotos.html">Nuevo Piloto</a></li>
+            <li class="social-links">
+                <a href="https://discord.gg/AzArzy3WZa" target="_blank">
+                    <img src="discord.png" alt="Discord">
+                </a>
+                <a href="https://www.twitch.tv/pedropuga7" target="_blank">
+                    <img src="twitch.png" alt="Twitch">
+                </a>
+                <a href="https://www.youtube.com/@PUGALEAGUE" target="_blank">
+                    <img src="youtube.png" alt="YouTube">
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pilotos.html">Nuestros Pilotos</a></li>
-        <li><a href="repeticiones.html">Repeticiones</a></li>
-        <li><a href="reglamento.html">Reglamento</a></li>
-        <li><a href="nuevospilotos.html">Nuevo Piloto</a></li>
-    </ul>
-</nav>
+
 
 <div class="container">
     <section class="section mercedes">
@@ -452,8 +467,8 @@
         <h2>Red Bull</h2>
         <div class="section-content">
             <div class="pilot">
-                <img src="jostrume.png" alt="Foto de Jostrume">
-                <p><strong>Jostrume</strong></p>
+                <img src="munteras.png" alt="Foto de Jostrume">
+                <p><strong>munteras</strong></p>
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">

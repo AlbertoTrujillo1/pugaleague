@@ -6,65 +6,66 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Puga League - Repeticiones</title>
     <style>
-        .caster {
-    text-align: center;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-    margin-top: 20px;
-    width: 100%; /* Añadido para que ocupe todo el ancho */
-}
-
-.caster h2 {
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.caster-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.caster-image {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.caster-details {
-    max-width: 600px;
-    text-align: left;
-}
-
-.caster-details h3 {
-    color: #333;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.caster-details p {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
         /* Estilos globales */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Fondo gris claro */
-            color: #333; /* Texto gris oscuro */
+            background-color: #121212; /* Fondo oscuro */
+            color: #ffffff; /* Texto gris claro */
         }
 
         header {
-            background-color: #f7b932; /* Naranja */
-            text-align: center;
+            background-color: #1f1f1f; /* Fondo gris oscuro */
             padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            padding-left: 1rem;
+            color: #ffffff; /* Texto blanco */
+            font-size: 1.5rem;
+        }
+
+        nav {
+            text-align: right;
+            padding: 0.5rem 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 0.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e0e0e0; /* Texto gris claro */
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #f7b932; /* Naranja */
+            color: #121212; /* Texto oscuro */
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            margin: 0 0.5rem;
+            vertical-align: middle;
         }
 
         nav {
@@ -98,13 +99,29 @@
             background-color: #f7b932; /* Naranja */
             color: #333; /* Texto gris oscuro */
         }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 1rem;
+        }
+
+        .section {
+            background-color: white;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #1f1f1f; /* Fondo gris oscuro */
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -118,6 +135,7 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             text-align: center;
+            background-color: #121212; /* Fondo oscuro */
         }
 
         .flag-container img {
@@ -127,23 +145,62 @@
 
         .description {
             font-size: 16px;
-            color: #666;
+            color: #e0e0e0; /* Texto gris claro */
             line-height: 1.5;
         }
 
         .section-title {
             font-size: 24px;
-            color: #333;
+            color: #e0e0e0; /* Texto gris claro */
             margin-bottom: 20px;
             text-align: center;
         }
 
-        .caster-container {
-            width: 100%;
+        .caster {
             text-align: center;
             border-top: 1px solid #ccc;
             padding-top: 20px;
             margin-top: 20px;
+            width: 100%;
+        }
+
+        .caster h2 {
+            color: #e0e0e0; /* Texto gris claro */
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .caster-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .caster-image {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .caster-details {
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .caster-details h3 {
+            color: #e0e0e0; /* Texto gris claro */
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .caster-details p {
+            color: #e0e0e0; /* Texto gris claro */
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
         }
 
     </style>
@@ -152,30 +209,39 @@
 
 <header>
     <h1>Repeticiones</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pilotos.html">Nuestros Pilotos</a></li>
+            <li><a href="repeticiones.html">Repeticiones</a></li>
+            <li><a href="reglamento.html">Reglamento</a></li>
+            <li><a href="nuevospilotos.html">Nuevo Piloto</a></li>
+            <li class="social-links">
+                <a href="https://discord.gg/AzArzy3WZa" target="_blank">
+                    <img src="discord.png" alt="Discord">
+                </a>
+                <a href="https://www.twitch.tv/pedropuga7" target="_blank">
+                    <img src="twitch.png" alt="Twitch">
+                </a>
+                <a href="https://www.youtube.com/@PUGALEAGUE" target="_blank">
+                    <img src="youtube.png" alt="YouTube">
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
 
-<nav>
-    <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pilotos.html">Nuestros Pilotos</a></li>
-        <li><a href="repeticiones.html">Repeticiones</a></li>
-        <li><a href="reglamento.html">Reglamento</a></li>
-        <li><a href="nuevospilotos.html">Nuevo Piloto</a></li>
-    </ul>
-</nav>
-
 <div class="caster">
-    <h2>comentaristas</h2>
+    <h2>Comentaristas</h2>
     <div class="caster-info">
         <img src="caster.png" alt="Sergio" class="caster-image">
         <div class="caster-details">
             <h3>Sergio</h3>
             <p>Sergio es uno de nuestros principales comentaristas en la Puga League. Con una amplia experiencia en el mundo del automovilismo y su pasión por las carreras virtuales, Sergio brinda comentarios emocionantes y análisis experto durante nuestras transmisiones en vivo. Su capacidad para explicar estrategias y detalles técnicos hacen que las carreras sean aún más emocionantes para nuestros espectadores.</p>
-            <p>Además de ser un comentarista talentoso, Sergio también ha competido en numerosas ligas de simulación de carreras como la anterior puga league, lo que le brinda una perspectiva única sobre el mundo de las carreras virtuales.</p>
+            <p>Además de ser un comentarista talentoso, Sergio también ha competido en numerosas ligas de simulación de carreras como la anterior Puga League, lo que le brinda una perspectiva única sobre el mundo de las carreras virtuales.</p>
         </div>
     </div>
 </div>
-
 
 <div class="container">
     <!-- Bandera de Japón -->
@@ -192,6 +258,7 @@
         <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
             <img src="china.png" alt="Bandera de China">
         </a>
+        <h2>Circuito Internacional de Shanghai</h2>
         <p class="description">Conocido por su larga recta y complejas curvas, el Circuito Internacional de Shanghai ofrece desafíos únicos para los pilotos de Fórmula 1. Su diseño único, que incorpora elementos de la cultura china, lo convierte en una experiencia emocionante tanto para los pilotos como para los espectadores.</p>
     </div>
 
@@ -210,8 +277,4 @@
             <img src="italia.png" alt="Bandera de Imola">
         </a>
         <h2>Autódromo Enzo y Dino Ferrari</h2>
-        <p class="description">Clásico y desafiante circuito italiano, el Autódromo Enzo y Dino Ferrari, comúnmente conocido como Imola, es un circuito lleno de historia y emoción. Su diseño serpenteante y su atmósfera única lo convierten en un favorito entre muchos fanáticos de la Fórmula 1.</p>
-    </div>
-</div>
-</body>
-</html>
+        <p class="description">Clásico y desafiante circuito

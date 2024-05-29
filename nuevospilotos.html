@@ -6,49 +6,94 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Nuevos Pilotos - Puga League</title>
     <style>
-        /* Estilos globales */
-        body {
-            font-family: Arial, sans-serif;
+        body, header, nav, .container, .section, p, .footer {
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0; /* Fondo gris claro */
-            color: #333; /* Texto gris oscuro */
+            font-family: 'Roboto', sans-serif;
+            color: #e0e0e0; /* Texto gris claro */
+        }
+
+        body {
+            background-color: #121212; /* Fondo oscuro */
         }
 
         header {
-            background-color: #f7b932; /* Naranja */
-            text-align: center;
+            background-color: #1f1f1f; /* Fondo gris oscuro */
             padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        body {
-            font-family: Arial, sans-serif;
+        header h1 {
             margin: 0;
+            padding-left: 1rem;
+            color: #ffffff; /* Texto blanco */
+            font-size: 1.5rem;
+        }
+
+        nav {
+            text-align: right;
+            padding: 0.5rem 1rem;
+        }
+
+        nav ul {
+            list-style: none;
             padding: 0;
-            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 0.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e0e0e0; /* Texto gris claro */
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #f7b932; /* Naranja */
+            color: #121212; /* Texto oscuro */
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            margin: 0 0.5rem;
+            vertical-align: middle;
         }
 
         .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 1rem;
         }
 
-        img {
-            display: block;
-            margin: 0 auto 20px;
+        .section {
+            background-color: white;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h1, h2 {
             text-align: center;
+            color: #ffffff; /* Texto gris oscuro */
         }
 
         p {
             text-align: center;
             margin-bottom: 20px;
+            color: #ffffff; /* Texto gris */
         }
 
         .button {
@@ -74,90 +119,32 @@
             font-size: 14px;
             color: #666;
         }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0; /* Fondo gris claro */
-            color: #333; /* Texto gris oscuro */
-        }
-
-        header {
-            background-color: #f7b932; /* Naranja */
-            text-align: center;
-            padding: 1rem 0;
-        }
-
-        nav {
-            background-color: #333; /* Fondo negro */
-            padding: 0.5rem 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav ul li {
-            margin: 0.5rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff; /* Texto blanco */
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #f7b932; /* Naranja */
-            color: #333; /* Texto gris oscuro */
-        }
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            max-width: 1200px;
-            padding: 1rem;
-        }
-
-        .section {
-            background-color: white;
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section h2 {
-            border-bottom: 2px solid #333; /* Borde inferior gris oscuro */
-            padding-bottom: 0.5rem;
-            color: #333; /* Texto gris oscuro */
-        }
-
-        .section-content {
-            margin-top: 1rem;
-        }
     </style>
 </head>
 <header>
     <h1>Nuevos Pilotos</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pilotos.html">Nuestros Pilotos</a></li>
+            <li><a href="repeticiones.html">Repeticiones</a></li>
+            <li><a href="reglamento.html">Reglamento</a></li>
+            <li><a href="nuevospilotos.html">Nuevo Piloto</a></li>
+            <li class="social-links">
+                <a href="https://discord.gg/AzArzy3WZa" target="_blank">
+                    <img src="discord.png" alt="Discord">
+                </a>
+                <a href="https://www.twitch.tv/pedropuga7" target="_blank">
+                    <img src="twitch.png" alt="Twitch">
+                </a>
+                <a href="https://www.youtube.com/@PUGALEAGUE" target="_blank">
+                    <img src="youtube.png" alt="YouTube">
+                </a>
+            </li>
+        </ul>
+    </nav>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pilotos.html">Nuestros Pilotos</a></li>
-        <li><a href="repeticiones.html">Repeticiones</a></li>
-        <li><a href="reglamento.html">Reglamento</a></li>
-        <li><a href="nuevospilotos.html">Nuevo Piloto</a></li>
-    </ul>
-</nav>
 
 <body>
     <div class="container">
