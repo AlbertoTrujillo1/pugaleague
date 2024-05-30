@@ -1,3 +1,57 @@
+/* Estilo del modal inspirado en la F1 */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Mantener el modal en su lugar */
+    z-index: 10; /* Situarlo encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%; /* Anchura completa */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilitar el desplazamiento si es necesario */
+    background-color: rgba(0,0,0,0.8); /* Negro con mayor opacidad para un look más elegante */
+}
+
+.modal-content {
+    background-color: rgb(31, 30, 30); /* Fondo blanco para contraste */
+    margin: 10% auto; /* 10% desde la parte superior y centrado */
+    padding: 40px; /* Acolchado más generoso para un look lujoso */
+    border: 2px solid #ff6702; /* Borde más grueso con color distintivo de la F1 */
+    border-radius: 10px; /* Bordes redondeados para suavidad */
+    width: 50%; /* Anchura del contenido reducida para centrar la atención */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Sombra para un efecto 3D */
+}
+
+.close {
+    color: #ffffff; /* Color distintivo de la F1 */
+    float: right;
+    font-size: 32px; /* Tamaño más grande para fácil interacción */
+    font-weight: bold;
+    margin-top: -10px; /* Ajuste para alinear con el borde superior */
+}
+
+.close:hover,
+.close:focus {
+    color: #e67e22; /* Cambio de color al interactuar */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 15px 30px; /* Acolchado más generoso para un botón más prominente */
+    background-color: #f19100; /* Botón negro para un look elegante */
+    color: #eeeeee; /* Texto blanco para contraste */
+    text-decoration: none;
+    border: none; /* Sin borde para un look más limpio */
+    border-radius: 5px; /* Bordes suavemente redondeados */
+    margin-top: 20px; /* Más espacio sobre el botón */
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+.btn:hover {
+    background-color: #130f0f; /* Cambio de color al pasar el ratón */
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -234,7 +288,7 @@ nav ul li a:hover {
 }
 
 .flag-container img {
-    width: 100%;
+    width: auto;
     height: auto;
     margin-bottom: 10px;
 }
@@ -247,79 +301,73 @@ nav ul li a:hover {
 
 .section-title {
     font-size: 24px;
-    color: #e0e0e0; /* Texto gris claro */
+    color: #fffefe; /* Texto gris claro */
     margin-bottom: 20px;
     text-align: center;
 }
 
 .caster {
-    text-align: center;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-    margin-top: 20px;
-    width: 100%;
+    background-color: #333; /* Fondo oscuro para destacar la sección */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra suave para dar profundidad */
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Espacio antes de la siguiente sección */
+    color: #ffffff; /* Texto en color claro para contraste */
 }
 
 .caster h2 {
-    color: #e0e0e0; /* Texto gris claro */
-    font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .caster-info {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio antes de los detalles */
 }
 
 .caster-image {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 20px;
+    width: 150px; /* Tamaño fijo para la imagen */
+    height: 150px;
+    border-radius: 50%; /* Hacer la imagen redonda */
+    margin-right: 20px;
+    border: 3px solid #d35400; /* Borde colorido para destacar la imagen */
 }
 
 .caster-details {
-    max-width: 600px;
-    text-align: center;
+    text-align: left; /* Alinear el texto a la izquierda para los detalles */
 }
 
-.caster-details h3 {
-    color: #e0e0e0; /* Texto gris claro */
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
+.caster-details h3,
 .caster-details p {
-    color: #e0e0e0; /* Texto gris claro */
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
+    margin: 0; /* Eliminar márgenes por defecto */
 }
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
-    .flag-container {
-        flex: 1 1 100%; /* Ajuste para 1 columna */
-        margin: 10px 0;
+    .caster {
+        background-color: #f4f4f4; /* Fondo más claro para modo responsivo */
+        color: #333; /* Texto oscuro para contraste */
+    }
+
+    .caster h2 {
+        color: #d35400; /* Color que combina con el borde de la imagen */
     }
 
     .caster-info {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Ajustar elementos en columna */
     }
 
     .caster-image {
-        margin-bottom: 20px;
+        margin: 0 auto 20px; /* Centrar imagen y agregar espacio debajo */
     }
 
-    .container {
-        flex-direction: column;
-        align-items: center;
+    .caster-details {
+        text-align: center; /* Centrar detalles para vista móvil */
     }
 }
+
 /*  */
 .section {
     background-color: #1f1f1f; /* Fondo gris oscuro */

@@ -48,6 +48,8 @@ img {
     </style>
 </head>
 <body>
+    <!-- Añade esto al final de tu body, justo antes de la etiqueta </body> -->
+
     <header>
         <h1>Home</h1>
         <nav>
@@ -71,6 +73,16 @@ img {
             </ul>
         </nav>
     </header>
+
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>¡Bienvenido a la Puga League!</h2>
+            <p>Explora las repeticiones de nuestras emocionantes carreras y conoce a nuestros talentosos pilotos.</p>
+            <a href="pilotos.html" class="btn">Nuestros Pilotos</a>
+            <a href="reglamento.html" class="btn">Reglamento</a>
+        </div>
+    </div>
 
     <div class="container">
         <section class="section">
@@ -122,6 +134,32 @@ img {
         <div class="countdown" id="countdown"></div>
     </div>
     
+    <script>
+        // Obtener el modal
+        var modal = document.getElementById('welcomeModal');
+        
+        // Obtener el elemento <span> que cierra el modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // Cuando el usuario carga la página, abrir el modal después de 3 segundos
+        window.onload = function() {
+            setTimeout(function() {
+                modal.style.display = "block";
+            }, 3000);
+        };
+        
+        // Cuando el usuario hace clic en <span> (x), cerrar el modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        // Cuando el usuario hace clic en cualquier lugar fuera del modal, cerrarlo
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
     <script>
         // Establecer la fecha objetivo (9 de junio de 2024 a las 11:00 en Montreal)
         const countdownDate = new Date('June 9, 2024 11:00:00').getTime();
