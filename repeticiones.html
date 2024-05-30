@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             background-color: #121212; /* Fondo oscuro */
-            color: #ffffff; /* Texto gris claro */
+            color: #ffffff; /* Texto blanco */
         }
 
         header {
@@ -29,43 +29,6 @@
             padding-left: 1rem;
             color: #ffffff; /* Texto blanco */
             font-size: 1.5rem;
-        }
-
-        nav {
-            text-align: right;
-            padding: 0.5rem 1rem;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin: 0 0.5rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #e0e0e0; /* Texto gris claro */
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #f7b932; /* Naranja */
-            color: #121212; /* Texto oscuro */
-        }
-
-        .social-links img {
-            width: 24px;
-            height: 24px;
-            margin: 0 0.5rem;
-            vertical-align: middle;
         }
 
         nav {
@@ -100,46 +63,36 @@
             color: #333; /* Texto gris oscuro */
         }
 
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            margin: 0 0.5rem;
+            vertical-align: middle;
+        }
+
         .container {
             width: 90%;
             margin: 0 auto;
             max-width: 1200px;
             padding: 1rem;
-        }
-
-        .section {
-            background-color: white;
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: #1f1f1f; /* Fondo gris oscuro */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
 
         .flag-container {
-            flex: 1;
-            max-width: 300px;
+            flex: 1 1 calc(50% - 2rem); /* Ajuste para 2 columnas */
             margin: 10px;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
             text-align: center;
-            background-color: #121212; /* Fondo oscuro */
+            background-color: #1f1f1f; /* Fondo gris oscuro */
         }
 
         .flag-container img {
-            max-width: 100%;
+            width: 100%;
+            height: auto;
             margin-bottom: 10px;
         }
 
@@ -172,7 +125,7 @@
 
         .caster-info {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             margin-bottom: 20px;
         }
@@ -182,12 +135,12 @@
             width: 100px;
             height: 100px;
             object-fit: cover;
-            margin-right: 20px;
+            margin-bottom: 20px;
         }
 
         .caster-details {
             max-width: 600px;
-            text-align: left;
+            text-align: center;
         }
 
         .caster-details h3 {
@@ -203,6 +156,42 @@
             margin-bottom: 10px;
         }
 
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .flag-container {
+                flex: 1 1 100%; /* Ajuste para 1 columna */
+                margin: 10px 0;
+            }
+
+            .caster-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .caster-image {
+                margin-bottom: 20px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                padding: 0;
+            }
+
+            nav ul li a {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -252,29 +241,7 @@
         <h2>Circuito de Suzuka</h2>
         <p class="description">Desafiante y emblemático trazado japonés. Suzuka es famoso por su combinación de curvas rápidas y lentas, así como por su famosa "S" de alta velocidad y la chicane de la "Casa del Mago". Es un circuito exigente que pone a prueba las habilidades de los pilotos y es un favorito entre muchos fanáticos de la Fórmula 1.</p>
     </div>
+</div>
 
-    <!-- Bandera de China -->
-    <div class="flag-container">
-        <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
-            <img src="china.png" alt="Bandera de China">
-        </a>
-        <h2>Circuito Internacional de Shanghai</h2>
-        <p class="description">Conocido por su larga recta y complejas curvas, el Circuito Internacional de Shanghai ofrece desafíos únicos para los pilotos de Fórmula 1. Su diseño único, que incorpora elementos de la cultura china, lo convierte en una experiencia emocionante tanto para los pilotos como para los espectadores.</p>
-    </div>
-
-    <!-- Bandera de Miami -->
-    <div class="flag-container">
-        <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
-            <img src="eeu.png" alt="Bandera de Miami">
-        </a>
-        <h2>Circuito de Miami</h2>
-        <p class="description">El Circuito de Miami es un circuito urbano que mezcla la velocidad con las exigencias técnicas. Con vistas al océano y pasando por algunos de los lugares más emblemáticos de la ciudad, ofrece una experiencia única tanto para los pilotos como para los espectadores.</p>
-    </div>
-
-    <!-- Bandera de Imola -->
-    <div class="flag-container">
-        <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
-            <img src="italia.png" alt="Bandera de Imola">
-        </a>
-        <h2>Autódromo Enzo y Dino Ferrari</h2>
-        <p class="description">Clásico y desafiante circuito
+</body>
+</html>
