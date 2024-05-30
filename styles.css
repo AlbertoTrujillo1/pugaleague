@@ -347,42 +347,26 @@ nav ul li a:hover {
 /* Ajustes responsivos */
 @media (max-width: 768px) {
     .caster {
-        background-color: #333; /* Fondo oscuro para destacar la sección */
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra suave para dar profundidad */
-        text-align: center; /* Centrar el texto */
-        margin-bottom: 20px; /* Espacio antes de la siguiente sección */
-        color: #ffffff; /* Texto en color claro para contraste */
+        background-color: #333; /* Fondo más claro para modo responsivo */
+        color: #ffffff; /* Texto oscuro para contraste */
     }
-    
+
     .caster h2 {
-        margin-bottom: 10px;
+        color: #ffffff; /* Color que combina con el borde de la imagen */
     }
-    
+
     .caster-info {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px; /* Espacio antes de los detalles */
+        flex-direction: column; /* Ajustar elementos en columna */
     }
-    
+
     .caster-image {
-        width: 150px; /* Tamaño fijo para la imagen */
-        height: 150px;
-        border-radius: 50%; /* Hacer la imagen redonda */
-        margin-right: 20px;
-        border: 3px solid #d35400; /* Borde colorido para destacar la imagen */
+        margin: 0 auto 20px; /* Centrar imagen y agregar espacio debajo */
     }
-    
+
     .caster-details {
-        text-align: left; /* Alinear el texto a la izquierda para los detalles */
+        text-align: center; /* Centrar detalles para vista móvil */
     }
-    
-    .caster-details h3,
-    .caster-details p {
-        margin: 0; /* Eliminar márgenes por defecto */
-    }
+}
 
 /*  */
 .section {
