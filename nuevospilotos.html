@@ -6,71 +6,72 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Nuevos Pilotos - Puga League</title>
     <style>
-        body, header, nav, .container, .section, p, .footer {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            color: #e0e0e0; /* Texto gris claro */
-        }
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #080808; /* Fondo oscuro */
+    color: #ffffff; /* Texto gris claro */
+}
 
-        body {
-            background-color: #121212; /* Fondo oscuro */
-        }
+header {
+    background-color: #1f1f1f; /* Fondo gris oscuro */
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+}
 
-        header {
-            background-color: #1f1f1f; /* Fondo gris oscuro */
-            padding: 1rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
+header h1 {
+    margin: 0;
+    padding-left: 1rem;
+    color: #ffffff; /* Texto blanco */
+    font-size: 1.5rem;
+}
 
-        header h1 {
-            margin: 0;
-            padding-left: 1rem;
-            color: #ffffff; /* Texto blanco */
-            font-size: 1.5rem;
-        }
+nav {
+    text-align: right;
+    padding: 0.5rem 1rem;
+    flex: 1; /* Permitir que nav ocupe espacio disponible */
+}
 
-        nav {
-            text-align: right;
-            padding: 0.5rem 1rem;
-        }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+    justify-content: flex-end;
+}
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            align-items: center;
-        }
+nav ul li {
+    margin: 0 0.5rem;
+}
 
-        nav ul li {
-            margin: 0 0.5rem;
-        }
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0; /* Texto gris claro */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #e0e0e0; /* Texto gris claro */
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
-        }
+nav ul li a:hover {
+    background-color: #f7b932; /* Naranja */
+    color: #ffffff; /* Texto oscuro */
+}
 
-        nav ul li a:hover {
-            background-color: #f7b932; /* Naranja */
-            color: #121212; /* Texto oscuro */
-        }
+.social-links img {
+    width: 24px;
+    height: 24px;
+    margin: 0 0.5rem;
+    vertical-align: middle;
+}
 
-        .social-links img {
-            width: 24px;
-            height: 24px;
-            margin: 0 0.5rem;
-            vertical-align: middle;
-        }
-
-        .container {
+.container {
             width: 90%;
             margin: 0 auto;
             max-width: 1200px;
