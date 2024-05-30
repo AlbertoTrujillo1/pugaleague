@@ -5,220 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Puga League - Repeticiones</title>
-    <style>
-        /* Estilos globales */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212; /* Fondo oscuro */
-            color: #ffffff; /* Texto blanco */
-        }
-
-        header {
-            background-color: #1f1f1f; /* Fondo gris oscuro */
-            padding: 1rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        header h1 {
-            margin: 0;
-            padding-left: 1rem;
-            color: #ffffff; /* Texto blanco */
-            font-size: 1.5rem;
-        }
-
-        nav {
-            background-color: #333; /* Fondo negro */
-            padding: 0.5rem 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav ul li {
-            margin: 0.5rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff; /* Texto blanco */
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #f7b932; /* Naranja */
-            color: #333; /* Texto gris oscuro */
-        }
-
-        .social-links img {
-            width: 24px;
-            height: 24px;
-            margin: 0 0.5rem;
-            vertical-align: middle;
-        }
-
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            max-width: 1200px;
-            padding: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .flag-container {
-            flex: 1 1 calc(50% - 2rem); /* Ajuste para 2 columnas */
-            margin: 10px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-align: center;
-            background-color: #1f1f1f; /* Fondo gris oscuro */
-        }
-
-        .flag-container img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .description {
-            font-size: 16px;
-            color: #e0e0e0; /* Texto gris claro */
-            line-height: 1.5;
-        }
-
-        .section-title {
-            font-size: 24px;
-            color: #e0e0e0; /* Texto gris claro */
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .caster {
-            text-align: center;
-            border-top: 1px solid #ccc;
-            padding-top: 20px;
-            margin-top: 20px;
-            width: 100%;
-        }
-
-        .caster h2 {
-            color: #e0e0e0; /* Texto gris claro */
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .caster-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .caster-image {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
-        .caster-details {
-            max-width: 600px;
-            text-align: center;
-        }
-
-        .caster-details h3 {
-            color: #e0e0e0; /* Texto gris claro */
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .caster-details p {
-            color: #e0e0e0; /* Texto gris claro */
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 10px;
-        }
-
-        /* Ajustes responsivos */
-        @media (max-width: 768px) {
-            .flag-container {
-                flex: 1 1 100%; /* Ajuste para 1 columna */
-                margin: 10px 0;
-            }
-
-            .caster-info {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .caster-image {
-                margin-bottom: 20px;
-            }
-
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.2rem;
-            }
-
-            nav ul {
-                padding: 0;
-            }
-
-            nav ul li a {
-                padding: 0.5rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <h1>Repeticiones</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="pilotos.html">Nuestros Pilotos</a></li>
-            <li><a href="repeticiones.html">Repeticiones</a></li>
-            <li><a href="reglamento.html">Reglamento</a></li>
-            <li><a href="nuevospilotos.html">Nuevo Piloto</a></li>
-            <li class="social-links">
-                <a href="https://discord.gg/AzArzy3WZa" target="_blank">
-                    <img src="discord.png" alt="Discord">
-                </a>
-                <a href="https://www.twitch.tv/pedropuga7" target="_blank">
-                    <img src="twitch.png" alt="Twitch">
-                </a>
-                <a href="https://www.youtube.com/@PUGALEAGUE" target="_blank">
-                    <img src="youtube.png" alt="YouTube">
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <h1>PUGALEAGUE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pilotos.html">Nuestros Pilotos</a></li>
+                <li><a href="repeticiones.html">Repeticiones</a></li>
+                <li><a href="reglamento.html">Reglamento</a></li>
+                <li><a href="nuevospilotos.html">Nuevo Piloto</a></li>
+                <li class="social-links">
+                    <a href="https://discord.gg/AzArzy3WZa" target="_blank">
+                        <img src="discord.png" alt="Discord">
+                    </a>
+                    <a href="https://www.twitch.tv/pedropuga7" target="_blank">
+                        <img src="twitch.png" alt="Twitch">
+                    </a>
+                    <a href="https://www.youtube.com/@PUGALEAGUE" target="_blank">
+                        <img src="youtube.png" alt="YouTube">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
 <div class="caster">
     <h2>Comentaristas</h2>
