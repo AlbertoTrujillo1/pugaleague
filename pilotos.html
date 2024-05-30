@@ -7,6 +7,101 @@
     <title>Nuestros Pilotos - Puga League</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            margin: 0 0.5rem;
+            vertical-align: middle;
+        }
+
+        .container {
+            width: 90%;
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .section {
+            background-color: #1f1f1f;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #ffffff; /* Borde inferior naranja */
+            padding-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .pilot {
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            width: 100%;
+            max-width: 48%;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .pilot img {
+            width: 100%;
+            max-width: 220px; /* Ancho máximo de la imagen */
+            height: 220px; /* Alto fijo de la imagen */
+            object-fit: cover; /* Ajustar imagen al contenedor */
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            background-color: inherit;
+        }
+
+        .pilot p {
+            background-color: #000000;
+            padding: 0.5rem;
+            border-radius: 8px;
+            border: 2px solid #ffffff;
+        }
+
+        details {
+            margin-top: 1rem;
+        }
+
+        details summary {
+            cursor: pointer;
+            font-weight: bold;
+            background-color: #f7b932;
+            padding: 0.5rem;
+            border-radius: 4px;
+            color: #121212;
+        }
+
+        details[open] summary {
+            background-color: #333;
+            color: #fff;
+        }
+
+        details .info {
+            padding: 0.5rem;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            background-color: #ffffff;
+        }
+
         /* Estilos de colores para cada escudería */
         .mercedes {
             background-color: #27F4D2; /* Mercedes */
@@ -48,9 +143,57 @@
             background-color: #B6BABD; /* Haas */
         }
 
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .container {
+                width: 100%;
+                padding: 0.5rem;
+            }
+
+            .section-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pilot {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                padding: 0;
+            }
+
+            nav ul li a {
+                padding: 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .pilot img {
+                max-width: 180px;
+                height: 180px;
+            }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <h1>PUGALEAGUE</h1>
         <nav>
