@@ -9,22 +9,35 @@
 
     <style>
 
-        .social-links img {
-            width: 24px;
-            height: 24px;
-            margin: 0 0.5rem;
-            vertical-align: middle;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+       
         .container {
-            width: 90% auto;
+            width: 90%;
             margin: auto;
             max-width: 800px;
             padding: 1rem;
         }
 
         .section {
-            background-color: #1f1f1f; /* Fondo gris oscuro */
+            background-color: #1f1f1f;
             margin-bottom: 2rem;
             padding: 1rem;
             border-radius: 8px;
@@ -32,9 +45,9 @@
         }
 
         .section h2 {
-            border-bottom: 2px solid #f7b932; /* Borde inferior naranja */
+            border-bottom: 2px solid #f7b932;
             padding-bottom: 0.5rem;
-            color: #f7b932; /* Texto naranja */
+            color: #f7b932;
         }
 
         .section-content {
@@ -43,14 +56,11 @@
 
         iframe {
             width: 100%;
-            height: 80vh; /* Ajustado para evitar exceso de altura */
+            height: 80vh;
             border: none;
         }
 
-        /* Ajustes responsivos */
         @media (max-width: 768px) {
-
-
             .section h2 {
                 font-size: 1.5rem;
             }
@@ -59,15 +69,17 @@
                 height: 60vh;
             }
         }
-
         @media (max-width: 480px) {
-
             .section h2 {
                 font-size: 1.2rem;
             }
 
             iframe {
                 height: 50vh;
+            }
+
+            header {
+                padding: 0.5rem 0;
             }
         }
     </style>
@@ -125,7 +137,7 @@
             <p>Los ganadores de las carreras se determinan en base al tiempo total y a las reglas específicas establecidas para cada evento, las cuales se detallan en el <a href="normativa.pdf">reglamento</a>.</p>
     
             <h3>¿Hay algún costo para participar en la Puga League?</h3>
-            <p> Para participar en la liga es necesario ser suscriptor del canal de Twitch <a href="https://www.twitch.tv/pedropuga7" target="_blank">PEDROPUGA</a> con Tier 1 o Prime.</p>
+            <p>Para participar en la liga es necesario ser suscriptor del canal de Twitch <a href="https://www.twitch.tv/pedropuga7" target="_blank">PEDROPUGA7</a> con Tier 1 o Prime.</p>
     
             <h3>¿Cómo puedo contactar al soporte de la Puga League?</h3>
             <p>Para contactar al soporte, puedes unirte a nuestro <a href="https://discord.gg/AzArzy3WZa" target="_blank">servidor de Discord</a> y enviar un mensaje al administrador de la liga.</p>
