@@ -433,24 +433,37 @@ iframe {
 }
 .pilot {
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     width: 100%;
     max-width: 48%;
     box-sizing: border-box;
     background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pilot:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .pilot img {
     width: 100%;
-    max-width: 220px; /* Ancho máximo de la imagen */
-    height: 220px; /* Alto fijo de la imagen */
-    object-fit: cover; /* Ajustar imagen al contenedor */
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
+    max-width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
     background-color: inherit;
+    border: 3px solid #ffffff;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.pilot:hover img {
+    transform: scale(1.05);
+    border: 3px solid #000000;
 }
 
 .pilot p {
@@ -458,19 +471,35 @@ iframe {
     padding: 0.5rem;
     border-radius: 8px;
     border: 2px solid #ffffff;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.pilot:hover p {
+    background-color: #333;
 }
 
 details {
     margin-top: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+details:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 details summary {
     cursor: pointer;
     font-weight: bold;
     background-color: #f7b932;
-    padding: 0.5rem;
-    border-radius: 4px;
+    padding: 1rem;
+    border-radius: 8px;
     color: #121212;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 details[open] summary {
@@ -479,12 +508,12 @@ details[open] summary {
 }
 
 details .info {
-    padding: 0.5rem;
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
 }
-
 /* Estilos de colores para cada escudería */
 
 /* Ajustes responsivos */
