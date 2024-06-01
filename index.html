@@ -51,35 +51,37 @@
             margin-bottom: 2rem; /* Añadir margen entre el carrusel y el contador */
         }
 
-        .carousel img {
-            width: 100%;
-            display: none;
-        }
+/* Default styles */
 
-        .carousel img.active {
-            display: block;
-        }
+.carousel img {
+    width: 100%;
+    display: none;
+}
 
-        .carousel .prev, .carousel .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgb(0, 0, 0);
-            color: white;
-            border: none;
-            padding: 1rem;
-            cursor: pointer;
-        }
+.carousel img.active {
+    display: block;
+}
 
-        .carousel .prev {
-            left: 10px;
-        }
+.carousel .prev, .carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
 
-        .carousel .next {
-            right: 10px;
-        }
+.carousel .prev {
+    left: 10px;
+}
 
-        .section.events-section {
+.carousel .next {
+    right: 10px;
+}
+
+.section.events-section {
     background-color: rgb(58, 58, 58);
     margin-bottom: 2rem;
     padding: 1rem;
@@ -121,6 +123,32 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Media queries for responsive design */
+
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens, such as tablets and mobile devices */
+    .carousel .prev, .carousel .next {
+        padding: 0.5rem;
+    }
+
+    .section.events-section {
+        padding: 0.5rem;
+    }
+
+    .section.events-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .section.events-section .event {
+        padding: 0.5rem;
+    }
+
+    .section.events-section .countdown {
+        font-size: 1rem;
+    }
+}
+
 
     </style>
 </head>
