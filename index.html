@@ -64,7 +64,7 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-color: rgba(0,0,0,0.5);
+            background-color: rgb(0, 0, 0);
             color: white;
             border: none;
             padding: 1rem;
@@ -149,6 +149,14 @@
         </nav>
     </header>
 
+    <section class="section carousel">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        <img src="foto5.png" class="active">
+        <img src="foto4.png">
+        <img src="foto3.png">
+    </section>
+
     <div id="welcomeModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -208,14 +216,6 @@
             </div>
         </section>
 
-        <section class="section carousel">
-            <h2>Galería de Fotos</h2>
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
-            <img src="foto5.png" class="active">
-            <img src="foto4.png">
-            <img src="foto3.png">
-        </section>
     </div>
 
     <script>
