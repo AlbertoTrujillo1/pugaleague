@@ -7,49 +7,90 @@
     <title>Puga League - Home</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 600px;
+            align-content: center;
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .section {
+            background-color: rgb(58, 58, 58);
+            margin-bottom: 2rem;
+            padding: 1rem;
+            align-content: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        
+        .section h2 {
+            font-size: 1.3rem;
+        }
+        
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        img {
+            max-width: 100%;
+        }
 
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 600px;
-    align-content: center;
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start; /* Alinear los elementos arriba */
-}
+        .carousel img {
+            width: 100%;
+            display: none;
+        }
 
-.section {
-    background-color: rgb(58, 58, 58);
-    margin-bottom: 2rem;
-    padding: 1rem;
-    align-content: center;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ocupar todo el ancho */
-}
+        .carousel img.active {
+            display: block;
+        }
 
-.section h2 {
-    font-size: 1.3rem; /* Tamaño de fuente un poco más pequeño */
-}
+        .carousel .prev, .carousel .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+        }
 
-.section-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+        .carousel .prev {
+            left: 10px;
+        }
 
-img {
-    max-width: 100%; /* Imágenes responsivas */
-}
+        .carousel .next {
+            right: 10px;
+        }
+
+        footer {
+            background-color: rgb(58, 58, 58);
+            padding: 1rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
 
     </style>
 </head>
 <body>
-    <!-- Añade esto al final de tu body, justo antes de la etiqueta </body> -->
-
     <header>
         <h1>Home</h1>
         <nav>
@@ -119,7 +160,6 @@ img {
             <!-- Puedes agregar más noticias aquí -->
         </section>
 
-        <!-- Nuevas secciones -->
         <section class="events-section">
             <h2>Próximos Eventos</h2>
             <div class="event">
@@ -129,71 +169,76 @@ img {
             </div>
             <!-- Puedes agregar más eventos aquí -->
         </section>
-
-        <!-- Contador hasta el 9 de junio a las 11:00 en Montreal -->
         <div class="countdown" id="countdown"></div>
+        <section class="section carousel">
+            <h2>Galería de Fotos</h2>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            <img src="foto5.png" class="active">
+            <img src="foto4.png">
+            <img src="foto3.png">
+        </section>
     </div>
-    
+
     <script>
-        // Obtener el modal
+        // Google Translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
+        }
+    </script>
+
+    <script>
+        // Modal de bienvenida
         var modal = document.getElementById('welcomeModal');
-        
-        // Obtener el elemento <span> que cierra el modal
         var span = document.getElementsByClassName("close")[0];
         
-        // Cuando el usuario carga la página, abrir el modal después de 3 segundos
         window.onload = function() {
             setTimeout(function() {
                 modal.style.display = "block";
             }, 3000);
         };
-        
-        // Cuando el usuario hace clic en <span> (x), cerrar el modal
+
         span.onclick = function() {
             modal.style.display = "none";
-        }
-        
-        // Cuando el usuario hace clic en cualquier lugar fuera del modal, cerrarlo
+        };
+
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
+        };
+
+        // Carrusel de fotos
+        let slideIndex = 0;
+
+        function changeSlide(n) {
+            let slides = document.querySelectorAll('.carousel img');
+            slides[slideIndex].classList.remove('active');
+            slideIndex = (slideIndex + n + slides.length) % slides.length;
+            slides[slideIndex].classList.add('active');
         }
-        </script>
-    <script>
-        // Establecer la fecha objetivo (9 de junio de 2024 a las 11:00 en Montreal)
+
+        // Contador
         const countdownDate = new Date('June 9, 2024 11:00:00').getTime();
-    
-        // Actualizar el contador cada segundo
         const countdown = document.getElementById('countdown');
-    
+
         const updateCountdown = () => {
-            // Obtener la fecha y hora actual
             const now = new Date().getTime();
-    
-            // Calcular la diferencia entre la fecha objetivo y la fecha actual
             const difference = countdownDate - now;
-    
-            // Calcular días, horas, minutos y segundos restantes
             const days = Math.floor(difference / (1000 * 60 * 60 * 24));
             const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-    
-            // Mostrar el contador en el elemento HTML
+
             countdown.innerHTML = `Próxima carrera en ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
-    
-            // Si la cuenta regresiva ha terminado, mostrar un mensaje
+
             if (difference < 0) {
                 clearInterval(countdownInterval);
                 countdown.innerHTML = "¡La carrera ha comenzado!";
             }
         };
-    
-        // Actualizar el contador cada segundo
+
         const countdownInterval = setInterval(updateCountdown, 1000);
-    
-        // Actualizar el contador inicialmente para evitar un retraso de un segundo
         updateCountdown();
     </script>
 </body>
