@@ -48,6 +48,7 @@
             max-width: 100%;
             margin: auto;
             overflow: hidden;
+            margin-bottom: 2rem; /* Añadir margen entre el carrusel y el contador */
         }
 
         .carousel img {
@@ -78,15 +79,48 @@
             right: 10px;
         }
 
-        footer {
-            background-color: rgb(58, 58, 58);
-            padding: 1rem;
-            text-align: center;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
+        .section.events-section {
+    background-color: rgb(58, 58, 58);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section.events-section h2 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.section.events-section .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section.events-section .event {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+}
+
+.section.events-section .event h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.section.events-section .countdown {
+    font-size: 1.2rem;
+    color: #ffcc00;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
     </style>
 </head>
@@ -153,23 +187,27 @@
             </div>
         </section>
 
-        <section class="news-section">
+        <section class="section news-section">
             <h2>Últimas Noticias</h2>
-            <div class="news-item">
-                <img src="noticias.png">
-            <!-- Puedes agregar más noticias aquí -->
+            <div class="section-content">
+                <img src="noticias.png" alt="Noticias">
+                <!-- Puedes agregar más noticias aquí -->
+            </div>
         </section>
 
-        <section class="events-section">
+        <section class="section events-section">
             <h2>Próximos Eventos</h2>
-            <div class="event">
-                <h3>Carrera en Montreal</h3>
-                <p>Fecha: 9 de junio, 2024</p>
-                <p>Lugar: Circuito Gilles Villeneuve</p>
+            <div class="section-content">
+                <div class="event">
+                    <h3>Carrera en Montreal</h3>
+                    <p>Fecha: 9 de junio, 2024</p>
+                    <p>Lugar: Circuito Gilles Villeneuve</p>
+                </div>
+                <!-- Puedes agregar más eventos aquí -->
+                <div class="countdown" id="countdown"></div>
             </div>
-            <!-- Puedes agregar más eventos aquí -->
         </section>
-        <div class="countdown" id="countdown"></div>
+
         <section class="section carousel">
             <h2>Galería de Fotos</h2>
             <button class="prev" onclick="changeSlide(-1)">&#10094;</button>

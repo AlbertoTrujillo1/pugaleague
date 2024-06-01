@@ -255,27 +255,7 @@ nav ul li a:hover {
     }
 }
 
-.event, .news-item {
-    background-color: #161414;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
 
-.event h3, .news-item h3 {
-    margin-top: 0;
-}
-
-/* Estilos para el contador */
-.countdown {
-    text-align: center;
-    font-size: 1rem; /* Tamaño de fuente más pequeño */
-    margin-top: 20px;
-    padding: 10px; /* Añadir más espacio alrededor del contador */
-    background-color: #1f1f1f; /* Fondo gris oscuro */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 .flag-container {
     flex: 1 1 calc(50% - 2rem); /* Ajuste para 2 columnas */
