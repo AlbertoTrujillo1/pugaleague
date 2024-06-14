@@ -7,6 +7,7 @@
     <title>Puga League - Home</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+
         .container {
             width: 90%;
             margin: 0 auto;
@@ -176,6 +177,16 @@
             </ul>
         </nav>
     </header>
+    
+    <div class="header-carousel">
+        <img src="foto3.png" alt="Header Image 1" class="active">
+        <img src="foto4.png" alt="Header Image 2">
+        <img src="foto5.png" alt="Header Image 3">
+        <button class="prev" onclick="changeHeaderSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeHeaderSlide(1)">&#10095;</button>
+    </div>
+    
+    
 
     <div id="welcomeModal" class="modal">
         <div class="modal-content">
@@ -298,6 +309,20 @@
 
         const countdownInterval = setInterval(updateCountdown, 1000);
         updateCountdown();
+
+        // Carrusel del encabezado
+        let headerSlideIndex = 0;
+
+        function changeHeaderSlide(n) {
+            let slides = document.querySelectorAll('.header-carousel img');
+            slides[headerSlideIndex].classList.remove('active');
+            headerSlideIndex = (headerSlideIndex + n + slides.length) % slides.length;
+            slides[headerSlideIndex].classList.add('active');
+        }
+
+        // Iniciar el carrusel automáticamente
+        setInterval(() => changeHeaderSlide(1), 5000);
+
     </script>
 </body>
 </html>
