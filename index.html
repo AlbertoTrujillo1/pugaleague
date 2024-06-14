@@ -7,7 +7,78 @@
     <title>Puga League - Home</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+.header-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 1rem auto;
+    overflow: hidden;
+}
 
+.header-carousel img {
+    width: 100%;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.header-carousel img.active {
+    display: block;
+    opacity: 1;
+}
+
+.header-carousel .prev,
+.header-carousel .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.header-carousel .prev {
+    left: 10px;
+}
+
+.header-carousel .next {
+    right: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .header-carousel .prev,
+    .header-carousel .next {
+        padding: 0.4rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .header-carousel {
+        max-width: 900px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-carousel .prev,
+    .header-carousel .next {
+        padding: 0.3rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .header-carousel .prev,
+    .header-carousel .next {
+        padding: 0.2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header-carousel {
+        max-width: 100%;
+    }
+}
         .container {
             width: 90%;
             margin: 0 auto;
