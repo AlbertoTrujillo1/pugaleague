@@ -6,10 +6,49 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Puga League - Repeticiones</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #333;
+        }
+        main {
+            padding: 20px;
+        }
+        .caster, .container, .highlights, .contact {
+            background-color: #333;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .caster-info, .flag-container, .highlight {
+            display: flex;
+            align-items: center;
+        }
+        .caster-image, .highlight img, .flag-container img {
+            border-radius: 8px;
+            max-width: 150px;
+            margin-right: 20px;
+        }
+        button {
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ffffff;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Repeticiones</h1>
+        <h1>Puga League - Repeticiones</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -32,30 +71,54 @@
         </nav>
     </header>
 
-    <div class="caster">
-        <h2>Comentarista Principal</h2>
-        <div class="caster-info">
-            <img src="caster.png" alt="Sergio" class="caster-image">
-            <div class="caster-details">
-                <h3>Sergio</h3>
-                <p>Sergio, con su voz inconfundible y su pasión por el automovilismo, ha narrado algunas de las carreras más emocionantes, llevando la emoción de la pista directamente a los aficionados.</p>
+    <main>
+        <section class="caster">
+            <h2>Comentarista Principal</h2>
+            <div class="caster-info">
+                <img src="caster.png" alt="Sergio" class="caster-image">
+                <div class="caster-details">
+                    <h3>Sergio</h3>
+                    <p>con su voz inconfundible y su pasión por el automovilismo, ha narrado algunas de las carreras más emocionantes, llevando la emoción de la pista directamente a los aficionados.</p>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="container">
-        <!-- Bandera de Japón -->
-        <div class="flag-container">
-            <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
-                <img src="japon.png" alt="Bandera de Japón">
-            </a>
-            <h2>Circuito de Suzuka</h2>
-            <p class="description">Desafiante y emblemático trazado japonés. Suzuka es famoso por su combinación de curvas rápidas y lentas, así como por su famosa "S" de alta velocidad y la chicane de la "Casa del Mago". Es un circuito exigente que pone a prueba las habilidades de los pilotos.</p>
-            <!-- Botón para ver la carrera repetida -->
-            <button onclick="window.open('https://www.youtube.com/watch?v=-jWJ9m8YSKg', '_blank')">Ver Carrera Repetida</button>
-        </div>
-    </div>
+        <section class="container">
+            <div class="flag-container">
+                <a href="https://www.youtube.com/watch?v=-jWJ9m8YSKg" target="_blank">
+                    <img src="japon.png" alt="Bandera de Japón">
+                </a>
+                <div>
+                    <h2>Circuito de Suzuka</h2>
+                    <p class="description">Desafiante y emblemático trazado japonés. Suzuka es famoso por su combinación de curvas rápidas y lentas, así como por su famosa "S" de alta velocidad y la chicane de la "Casa del Mago". Es un circuito exigente que pone a prueba las habilidades de los pilotos.</p>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=-jWJ9m8YSKg', '_blank')">Ver Carrera Repetida</button>
+                </div>
+            </div>
+        </section>
 
-    <!-- Aquí puedes agregar más contenido o funcionalidades según tus necesidades -->
+        <section class="highlights">
+            <h2>Clips Destacados</h2>
+            <div class="highlight">
+                <div>
+                    <p>Ángel, ganador de la primera temporada de Puga League, fue el protagonista de esta increíble maniobra.</p>
+                    <button onclick="window.open('https://www.twitch.tv/pedropuga7/clip/AgileSpunkyElkPipeHype--g_iqpU51nl_oowl')">Ver Momento</button>
+                </div>
+            </div>
+            <div class="highlight">
+                <div>
+                    <h3></h3>
+                    <p> López se enfada y le da un golpe a su teléfono móvil tras un final de infarto.</p>
+                    <button onclick="window.open('https://www.twitch.tv/pedropuga7/clip/BrainyArborealBisonHeyGuys-pEEZqo4MgXvr35fJ')">Ver Momento</button>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="contact">
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta o deseas unirte a nuestra liga, no dudes en ponerte en contacto con nosotros a través de nuestras redes sociales o envíanos un correo a <a href="mailto:info@pugaleague.com">pugaleague@gmail.com</a>.</p>
+        </section>
+    </main>
+
 </body>
 </html>
