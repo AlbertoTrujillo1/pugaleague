@@ -12,7 +12,11 @@
             margin: 0;
             padding: 0;
             background-color: #000000;
-            color: #333;
+            color: #fff;
+        } 
+        .social-links a img {
+            width: 20px;
+            height: 20px;
         }
         main {
             padding: 20px;
@@ -22,16 +26,22 @@
             margin: 20px auto;
             padding: 20px;
             max-width: 800px;
+            border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .caster-info, .flag-container, .highlight {
             display: flex;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
         }
         .caster-image, .highlight img, .flag-container img {
             border-radius: 8px;
-            max-width: 150px;
-            margin-right: 20px;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        .caster-info div, .highlight div, .flag-container div {
+            max-width: 600px;
         }
         button {
             background-color: #ffffff;
@@ -40,9 +50,21 @@
             padding: 10px 20px;
             cursor: pointer;
             border-radius: 5px;
+            margin-top: 10px;
         }
         button:hover {
-            background-color: #ffffff;
+            background-color: #ddd;
+        }
+        @media (min-width: 600px) {
+            .caster-info, .flag-container, .highlight {
+                flex-direction: row;
+                text-align: left;
+            }
+            .caster-image, .highlight img, .flag-container img {
+                margin-right: 20px;
+                margin-bottom: 0;
+                max-width: 150px;
+            }
         }
     </style>
 </head>
@@ -78,7 +100,7 @@
                 <img src="caster.png" alt="Sergio" class="caster-image">
                 <div class="caster-details">
                     <h3>Sergio</h3>
-                    <p>con su voz inconfundible y su pasión por el automovilismo, ha narrado algunas de las carreras más emocionantes, llevando la emoción de la pista directamente a los aficionados.</p>
+                    <p>Con su voz inconfundible y su pasión por el automovilismo, ha narrado algunas de las carreras más emocionantes, llevando la emoción de la pista directamente a los aficionados.</p>
                 </div>
             </div>
         </section>
@@ -106,19 +128,16 @@
             </div>
             <div class="highlight">
                 <div>
-                    <h3></h3>
-                    <p> López se enfada y le da un golpe a su teléfono móvil tras un final de infarto.</p>
+                    <p>López se enfada y le da un golpe a su teléfono móvil tras un final de infarto.</p>
                     <button onclick="window.open('https://www.twitch.tv/pedropuga7/clip/BrainyArborealBisonHeyGuys-pEEZqo4MgXvr35fJ')">Ver Momento</button>
                 </div>
             </div>
         </section>
-        
 
         <section class="contact">
             <h2>Contacto</h2>
-            <p>Si tienes alguna pregunta o deseas unirte a nuestra liga, no dudes en ponerte en contacto con nosotros a través de nuestras redes sociales o envíanos un correo a <a href="mailto:info@pugaleague.com">pugaleague@gmail.com</a>.</p>
+            <p>Si tienes alguna pregunta o deseas unirte a nuestra liga, no dudes en ponerte en contacto con nosotros a través de nuestras redes sociales o envíanos un correo a <a href="mailto:pugaleague@gmail.com">pugaleague@gmail.com</a>.</p>
         </section>
     </main>
-
 </body>
 </html>
