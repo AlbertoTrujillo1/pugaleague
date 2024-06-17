@@ -28,7 +28,7 @@
         }
 
         .section h2 {
-            border-bottom: 2px solid #ffffff; /* Borde inferior naranja */
+            border-bottom: 2px solid #ffffff;
             padding-bottom: 0.5rem;
             color: #ffffff;
         }
@@ -52,9 +52,9 @@
 
         .pilot img {
             width: 100%;
-            max-width: 220px; /* Ancho máximo de la imagen */
-            height: 220px; /* Alto fijo de la imagen */
-            object-fit: cover; /* Ajustar imagen al contenedor */
+            max-width: 220px;
+            height: 220px;
+            object-fit: cover;
             border-radius: 8px;
             margin-bottom: 0.5rem;
             background-color: inherit;
@@ -92,76 +92,29 @@
             background-color: #ffffff;
         }
 
-        /* Estilos de colores para cada escudería */
-        .mercedes {
-            background-color: #27F4D2; /* Mercedes */
-        }
+        .mercedes { background-color: #27F4D2; }
+        .ferrari { background-color: #E8002D; }
+        .mclaren { background-color: #FF8000; }
+        .alpine { background-color: #FF87BC; }
+        .redbull { background-color: #3671C6; }
+        .rb { background-color: #6692FF; }
+        .astonmartin { background-color: #229971; }
+        .williams { background-color: #64C4FF; }
+        .sauber { background-color: #52E252; }
+        .haas { background-color: #B6BABD; }
 
-        .ferrari {
-            background-color: #E8002D; /* Ferrari */
-        }
-
-        .mclaren {
-            background-color: #FF8000; /* McLaren */
-        }
-
-        .alpine {
-            background-color: #FF87BC; /* Alpine */
-        }
-
-        .redbull {
-            background-color: #3671C6; /* Red Bull Racing */
-        }
-
-        .rb {
-            background-color: #6692FF; /* Visa Cash App RB */
-        }
-
-        .astonmartin {
-            background-color: #229971; /* Aston Martin */
-        }
-
-        .williams {
-            background-color: #64C4FF; /* Williams */
-        }
-
-        .sauber {
-            background-color: #52E252; /* Sauber */
-        }
-
-        .haas {
-            background-color: #B6BABD; /* Haas */
-        }
-
-        /* Ajustes responsivos */
         @media (max-width: 768px) {
-            .container {
-                width: 100%;
-                padding: 0.5rem;
-            }
-
-            .section-content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .pilot {
-                width: 100%;
-                max-width: 100%;
-                margin-bottom: 1rem;
-            }
+            .container { width: 100%; padding: 0.5rem; }
+            .section-content { flex-direction: column; align-items: center; }
+            .pilot { width: 100%; max-width: 100%; margin-bottom: 1rem; }
         }
 
         @media (max-width: 480px) {
-            .pilot img {
-                max-width: 180px;
-                height: 180px;
-            }
+            .pilot img { max-width: 180px; height: 180px; }
         }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Pilotos PL Temporada 2</h1>
         <nav>
@@ -185,77 +138,86 @@
             </ul>
         </nav>
     </header>
-
-
-
-<div class="container">
-    <section class="section mercedes">
-        <h2>Mercedes</h2>
-        <div class="section-content">
-            <div class="pilot">
-                <img src="angel.png" alt="Foto de Byangel">
-                <p><strong>Byangel</strong></p>
-                <details>
-                    <summary>Información adicional</summary>
-                    <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
-                    </div>
-                </details>
+    <div class="container">
+        <section class="section mercedes">
+            <h2>Mercedes</h2>
+            <div class="section-content">
+                <div class="pilot">
+                    <img src="angel.png" alt="Foto de Byangel">
+                    <p><strong>Byangel</strong></p>
+                    <details>
+                        <summary>Información adicional</summary>
+                        <div class="info">
+                            <p><strong>Equipo:</strong> Mercedes</p>
+                            <p><strong>País:</strong> España</p>
+                            <p><strong>Podios:</strong> 0</p>
+                            <p><strong>Puntos:</strong> 10</p>
+                            <p><strong>Grandes Premios:</strong> 1</p>
+                            <p><strong>Campeonatos Mundiales:</strong> 1</p>
+                            <p><strong>Mejor resultado de carrera:</strong> p5 (x1)</p>
+                            <p><strong>Mejor posición en parrilla:</strong> p4</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="pilot">
+                    <img src="nachitus.png" alt="Foto de Nachitus">
+                    <p><strong>Nachitus</strong></p>
+                    <details>
+                        <summary>Información adicional</summary>
+                        <div class="info">
+                            <p><strong>Equipo:</strong> Mercedes</p>
+                            <p><strong>País:</strong> España</p>
+                            <p><strong>Podios:</strong> 1</p>
+                            <p><strong>Puntos:</strong> 15</p>
+                            <p><strong>Grandes Premios:</strong> 1</p>
+                            <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                            <p><strong>Mejor resultado de carrera:</strong> p3 (x1)</p>
+                            <p><strong>Mejor posición en parrilla:</strong> p2</p>
+                        </div>
+                    </details>
+                </div>
             </div>
-            <div class="pilot">
-                <img src="nachitus.png" alt="Foto de Nachitus">
-                <p><strong>Nachitus</strong></p>
-                <details>
-                    <summary>Información adicional</summary>
-                    <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section sauber">
-        <h2>Sauber</h2>
-        <div class="section-content">
-            <div class="pilot">
-                <img src="odracir.png" alt="Foto de Odracir">
-                <p><strong>Odracir</strong></p>
-                <details>
-                    <summary>Información adicional</summary>
-                    <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
-                    </div>
-                </details>
+        <section class="section sauber">
+            <h2>Sauber</h2>
+            <div class="section-content">
+                <div class="pilot">
+                    <img src="odracir.png" alt="Foto de Odracir">
+                    <p><strong>Odracir</strong></p>
+                    <details>
+                        <summary>Información adicional</summary>
+                        <div class="info">
+                            <p><strong>Equipo:</strong> Sauber</p>
+                            <p><strong>País:</strong> España</p>
+                            <p><strong>Podios:</strong> 1</p>
+                            <p><strong>Puntos:</strong> 25</p>
+                            <p><strong>Grandes Premios:</strong> 1</p>
+                            <p><strong>Campeonatos Mundiales:</strong> 0 </p>
+                            <p><strong>Mejor resultado de carrera:</strong> p1 (x1)</p>
+                            <p><strong>Mejor posición en parrilla:</strong> p1</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="pilot">
+                    <img src="pablo.png" alt="Foto de Pablo Crack">
+                    <p><strong>Pablo Crack</strong></p>
+                    <details>
+                        <summary>Información adicional</summary>
+                        <div class="info">
+                            <p><strong>Equipo:</strong> Sauber</p>
+                            <p><strong>País:</strong> España</p>
+                            <p><strong>Podios:</strong> 0</p>
+                            <p><strong>Puntos:</strong> 0</p>
+                            <p><strong>Grandes Premios:</strong> 1</p>
+                            <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                            <p><strong>Mejor resultado de carrera:</strong> DNF</p>
+                            <p><strong>Mejor posición en parrilla:</strong> p15</p>
+                        </div>
+                    </details>
+                </div>
             </div>
-            <div class="pilot">
-                <img src="pablo.png" alt="Foto de Pablo Crack">
-                <p><strong>Pablo Crack</strong></p>
-                <details>
-                    <summary>Información adicional</summary>
-                    <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <section class="section ferrari">
         <h2>Ferrari</h2>
@@ -266,11 +228,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Ferrari</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 1</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> p7 (x1)</p>
+                        <p><strong>Mejor posición en parrilla:</strong> p8</p>
                     </div>
                 </details>
             </div>
@@ -280,11 +245,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Ferrari</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 1</p>
+                        <p><strong>Puntos:</strong> 18</p>
+                        <p><strong>Grandes Premios:</strong> 1</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> p2 (x1)</p>
+                        <p><strong>Mejor posición en parrilla:</strong> p16</p>
                     </div>
                 </details>
             </div>
@@ -300,11 +268,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Aston Martin</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 1</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> DNF</p>
+                        <p><strong>Mejor posición en parrilla:</strong> p3</p>
                     </div>
                 </details>
             </div>
@@ -314,11 +285,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Aston Martin</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 12</p>
+                        <p><strong>Grandes Premios:</strong> 1</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> p4 (x1)</p>
+                        <p><strong>Mejor posición en parrilla:</strong> p10</p>
                     </div>
                 </details>
             </div>
@@ -334,11 +308,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Alpine</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 1</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> DNF</p>
+                        <p><strong>Mejor posición en parrilla:</strong> p11</p>
                     </div>
                 </details>
             </div>
@@ -348,11 +325,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Alpine</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
@@ -368,11 +348,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Visa Cash App RB</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
@@ -382,17 +365,20 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Visa Cash App RB</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
         </div>
     </section>
-
+    
     <section class="section mclaren">
         <h2>McLaren</h2>
         <div class="section-content">
@@ -402,11 +388,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> McLaren</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
@@ -416,17 +405,20 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> McLaren</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> DNF</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
         </div>
     </section>
-
+    
     <section class="section redbull">
         <h2>Red Bull</h2>
         <div class="section-content">
@@ -436,11 +428,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Red Bull</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
@@ -450,17 +445,20 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Red Bull</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
         </div>
     </section>
-
+    
     <section class="section haas">
         <h2>Haas</h2>
         <div class="section-content">
@@ -470,11 +468,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Haas</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
@@ -484,17 +485,20 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Haas</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
         </div>
     </section>
-
+    
     <section class="section williams">
         <h2>Williams</h2>
         <div class="section-content">
@@ -504,11 +508,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Williams</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
@@ -518,16 +525,20 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Williams</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
         </div>
     </section>
+    
     <section class="section reservations">
         <h2>Zona de Reservas</h2>
         <div class="section-content">
@@ -537,11 +548,14 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Reservas</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
@@ -551,17 +565,20 @@
                 <details>
                     <summary>Información adicional</summary>
                     <div class="info">
-                        <p><strong>Poles:</strong> 0</p>
-                        <p><strong>Victorias:</strong> 0</p>
-                        <p><strong>Carreras jugadas:</strong> 0</p>
-                        <p><strong>Mejor posición de carrera:</strong> 0</p>
-                        <p><strong>Mejor posición de qualy:</strong> 0</p>
+                        <p><strong>Equipo:</strong> Reservas</p>
+                        <p><strong>País:</strong> España</p>
+                        <p><strong>Podios:</strong> 0</p>
+                        <p><strong>Puntos:</strong> 0</p>
+                        <p><strong>Grandes Premios:</strong> 0</p>
+                        <p><strong>Campeonatos Mundiales:</strong> 0</p>
+                        <p><strong>Mejor resultado de carrera:</strong> 0</p>
+                        <p><strong>Mejor posición en parrilla:</strong> 0</p>
                     </div>
                 </details>
             </div>
         </div>
     </section>
-</div>
+    
 
 <script>
     function toggleMenu() {
