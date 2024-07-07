@@ -7,221 +7,36 @@
     <title>Puga League - Home</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-.header-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 1rem auto;
-    overflow: hidden;
-}
-
-.header-carousel img {
-    width: 100%;
-    display: none;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.header-carousel img.active {
-    display: block;
-    opacity: 1;
-}
-
-.header-carousel .prev,
-.header-carousel .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.header-carousel .prev {
-    left: 10px;
-}
-
-.header-carousel .next {
-    right: 10px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .header-carousel .prev,
-    .header-carousel .next {
-        padding: 0.4rem;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .header-carousel {
-        max-width: 900px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .header-carousel .prev,
-    .header-carousel .next {
-        padding: 0.3rem;
-    }
-}
-
-@media only screen and (max-width: 576px) {
-    .header-carousel .prev,
-    .header-carousel .next {
-        padding: 0.2rem;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .header-carousel {
-        max-width: 100%;
-    }
-}
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            max-width: 600px;
-            align-content: center;
-            padding: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-        
-        .section {
-            background-color: rgb(58, 58, 58);
-            margin-bottom: 2rem;
-            padding: 1rem;
-            align-content: center;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 100%;
-        }
-        
-        .section h2 {
-            font-size: 1.3rem;
-        }
-        
-        .section-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        img {
-            max-width: 100%;
-        }
-
-        .carousel {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            overflow: hidden;
-            margin-bottom: 2rem; /* Añadir margen entre el carrusel y el contador */
-        }
-
-/* Default styles */
-
-.carousel img {
-    width: 100%;
-    display: none;
-}
-
-.carousel img.active {
-    display: block;
-}
-
-.carousel .prev, .carousel .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-}
-
-.carousel .prev {
-    left: 10px;
-}
-
-.carousel .next {
-    right: 10px;
-}
-
-.section.events-section {
-    background-color: rgb(58, 58, 58);
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.section.events-section h2 {
-    font-size: 1.3rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-.section.events-section .section-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.section.events-section .event {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
-}
-
-.section.events-section .event h3 {
-    margin: 0 0 0.5rem 0;
-}
-
-.section.events-section .countdown {
-    font-size: 1.2rem;
-    color: #ffcc00;
-    text-align: center;
-    margin-top: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Media queries for responsive design */
-
-@media only screen and (max-width: 768px) {
-    /* Adjust styles for smaller screens, such as tablets and mobile devices */
-    .carousel .prev, .carousel .next {
-        padding: 0.5rem;
-    }
-
-    .section.events-section {
-        padding: 0.5rem;
-    }
-
-    .section.events-section h2 {
-        font-size: 1.1rem;
-    }
-
-    .section.events-section .event {
-        padding: 0.5rem;
-    }
-
-    .section.events-section .countdown {
-        font-size: 1rem;
-    }
-}
-
-
+        /* Inline CSS minimized */
+        .header-carousel {position: relative; width: 100%; max-width: 1200px; margin: 1rem auto; overflow: hidden;}
+        .header-carousel img {width: 100%; display: none; transition: opacity 0.5s ease-in-out;}
+        .header-carousel img.active {display: block; opacity: 1;}
+        .header-carousel .prev, .header-carousel .next {position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 0.5rem; cursor: pointer; z-index: 1;}
+        .header-carousel .prev {left: 10px;}
+        .header-carousel .next {right: 10px;}
+        @media only screen and (max-width: 1200px) {.header-carousel .prev, .header-carousel .next {padding: 0.4rem;}}
+        @media only screen and (max-width: 992px) {.header-carousel {max-width: 900px;}}
+        @media only screen and (max-width: 768px) {.header-carousel .prev, .header-carousel .next {padding: 0.3rem;}}
+        @media only screen and (max-width: 576px) {.header-carousel .prev, .header-carousel .next {padding: 0.2rem;}}
+        @media only screen and (max-width: 480px) {.header-carousel {max-width: 100%;}}
+        .container {width: 90%; margin: 0 auto; max-width: 600px; align-content: center; padding: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;}
+        .section {background-color: rgb(58, 58, 58); margin-bottom: 2rem; padding: 1rem; align-content: center; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%;}
+        .section h2 {font-size: 1.3rem;}
+        .section-content {display: flex; flex-wrap: wrap; justify-content: space-between;}
+        img {max-width: 100%;}
+        .carousel {position: relative; max-width: 100%; margin: auto; overflow: hidden; margin-bottom: 2rem;}
+        .carousel img {width: 100%; display: none;}
+        .carousel img.active {display: block;}
+        .carousel .prev, .carousel .next {position: absolute; top: 50%; transform: translateY(-50%); background-color: rgb(0, 0, 0); color: white; border: none; padding: 1rem; cursor: pointer;}
+        .carousel .prev {left: 10px;}
+        .carousel .next {right: 10px;}
+        .section.events-section {background-color: rgb(58, 58, 58); margin-bottom: 2rem; padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        .section.events-section h2 {font-size: 1.3rem; color: #ffffff; margin-bottom: 1rem;}
+        .section.events-section .section-content {display: flex; flex-direction: column; gap: 1rem;}
+        .section.events-section .event {background-color: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); color: #ffffff;}
+        .section.events-section .event h3 {margin: 0 0 0.5rem 0;}
+        .section.events-section .countdown {font-size: 1.2rem; color: #ffcc00; text-align: center; margin-top: 1rem; background-color: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        @media only screen and (max-width: 768px) {.carousel .prev, .carousel .next {padding: 0.5rem;} .section.events-section {padding: 0.5rem;} .section.events-section h2 {font-size: 1.1rem;} .section.events-section .event {padding: 0.5rem;} .section.events-section .countdown {font-size: 1rem;}}
     </style>
 </head>
 <body>
@@ -235,30 +50,23 @@
                 <li><a href="reglamento.html">Reglamento</a></li>
                 <li><a href="nuevospilotos.html">Nuevo Piloto</a></li>
                 <li class="social-links">
-                    <a href="https://discord.gg/AzArzy3WZa" target="_blank">
-                        <img src="discord.png" alt="Discord">
-                    </a>
-                    <a href="https://www.twitch.tv/pedropuga7" target="_blank">
-                        <img src="twitch.png" alt="Twitch">
-                    </a>
-                    <a href="https://www.youtube.com/@PUGALEAGUE" target="_blank">
-                        <img src="youtube.png" alt="YouTube">
-                    </a>
+                    <a href="https://discord.gg/AzArzy3WZa" target="_blank"><img src="discord.png" alt="Discord"></a>
+                    <a href="https://www.twitch.tv/pedropuga7" target="_blank"><img src="twitch.png" alt="Twitch"></a>
+                    <a href="https://www.youtube.com/@PUGALEAGUE" target="_blank"><img src="youtube.png" alt="YouTube"></a>
                 </li>
             </ul>
         </nav>
     </header>
-    
     <div class="header-carousel">
-        <img src="foto3.png" alt="Header Image 1" class="active">
-        <img src="foto4.png" alt="Header Image 2">
-        <img src="foto5.png" alt="Header Image 3">
+        <img src="foto1.png" alt="Header Image 1" class="active">
+        <img src="foto2.png" alt="Header Image 2" loading="lazy">
+        <img src="foto3.png" alt="Header Image 3" loading="lazy">
+        <img src="foto4.png" alt="Header Image 4" loading="lazy">
+        <img src="foto5.png" alt="Header Image 5" loading="lazy">
+        <img src="foto6.png" alt="Header Image 6" loading="lazy">
         <button class="prev" onclick="changeHeaderSlide(-1)">&#10094;</button>
         <button class="next" onclick="changeHeaderSlide(1)">&#10095;</button>
     </div>
-    
-    
-
     <div id="welcomeModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -268,108 +76,82 @@
             <a href="reglamento.html" class="btn">Reglamento</a>
         </div>
     </div>
-
     <div class="container">
         <section class="section">
             <h2>Mundial de Pilotos</h2>
             <div class="section-content">
                 <div class="image-container">
-                    <img src="image (1).png" alt="Drivers 1">
+                    <img src="images(1).png" alt="Drivers 1" loading="lazy">
                 </div>
             </div>
         </section>
-
         <section class="section">
             <h2>Mundial de Constructores</h2>
             <div class="section-content">
                 <div class="image-container">
-                    <img src="constructores.png" alt="Constructores">
+                    <img src="constructores.png" alt="Constructores" loading="lazy">
                 </div>
             </div>
         </section>
-
         <section class="section">
             <h2>Calendario PL 2.0</h2>
             <div class="section-content">
                 <div class="image-container">
-                    <img src="calendario.jpg" alt="Calendario">
+                    <img src="calendario.jpg" alt="Calendario" loading="lazy">
                 </div>
             </div>
         </section>
-
         <section class="section news-section">
             <h2>Últimas Noticias</h2>
             <div class="section-content">
-                <img src="noticias1.png" alt="Noticias">
-                <!-- Puedes agregar más noticias aquí -->
+                <img src="noticias1.png" alt="Noticias" loading="lazy">
+                <!-- Agrega más noticias aquí -->
             </div>
         </section>
-
         <section class="section events-section">
             <h2>Próximos Eventos</h2>
             <div class="section-content">
                 <div class="event">
-                    <h3>Gran premio de Gran Bretaña</h3>
-                    <p>Fecha: 7 de julio, 2024</p>
-                    <p>Lugar: Silverstone Circuit </p>
-                    <p>
-                        <a href="https://www.twitch.tv/pedropuga7" target="_blank" style="display: inline-block; background-color: #6441a5; color: #ffffff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">
-                            ¡Ver Carrera en Vivo!
-                        </a>
-                    </p>
-
-                    
-                    
+                    <h3>Gran premio de Austria</h3>
+                    <p>Fecha: 14 de julio, 2024</p>
+                    <p>Lugar: Red Bull Ring</p>
+                    <p><a href="https://www.twitch.tv/pedropuga7" target="_blank" style="display: inline-block; background-color: #6441a5; color: #ffffff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold;">¡Ver Carrera en Vivo!</a></p>
                 </div>
-                <!-- Puedes agregar más eventos aquí -->
                 <div class="countdown" id="countdown"></div>
             </div>
         </section>
-
     </div>
-
-    <script>
-        // Google Translate
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'es'}, 'google_translate_element');
-        }
-    </script>
-
+    <script src="scripts.min.js" defer></script>
     <script>
         // Modal de bienvenida
         var modal = document.getElementById('welcomeModal');
         var span = document.getElementsByClassName("close")[0];
-        
         window.onload = function() {
             setTimeout(function() {
                 modal.style.display = "block";
             }, 3000);
         };
-
         span.onclick = function() {
             modal.style.display = "none";
         };
-
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         };
-
         // Carrusel de fotos
-        let slideIndex = 0;
-
-        function changeSlide(n) {
-            let slides = document.querySelectorAll('.carousel img');
-            slides[slideIndex].classList.remove('active');
-            slideIndex = (slideIndex + n + slides.length) % slides.length;
-            slides[slideIndex].classList.add('active');
+        let headerSlideIndex = 0;
+        function changeHeaderSlide(n) {
+            let slides = document.querySelectorAll('.header-carousel img');
+            slides[headerSlideIndex].classList.remove('active');
+            headerSlideIndex = (headerSlideIndex + n + slides.length) % slides.length;
+            slides[headerSlideIndex].classList.add('active');
         }
-
+        // Iniciar el carrusel automáticamente
+        setInterval(() => changeHeaderSlide(1), 5000);
         // Contador
-        const countdownDate = new Date('July 7, 2024 11:00:00').getTime();
+        const countdownDate = new Date('July 14, 2024 11:00:00').getTime();
         const countdown = document.getElementById('countdown');
-
         const updateCountdown = () => {
             const now = new Date().getTime();
             const difference = countdownDate - now;
@@ -377,31 +159,14 @@
             const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
             countdown.innerHTML = `Próxima carrera en ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
-
             if (difference < 0) {
                 clearInterval(countdownInterval);
                 countdown.innerHTML = "¡La carrera ha comenzado!";
             }
         };
-
         const countdownInterval = setInterval(updateCountdown, 1000);
         updateCountdown();
-
-        // Carrusel del encabezado
-        let headerSlideIndex = 0;
-
-        function changeHeaderSlide(n) {
-            let slides = document.querySelectorAll('.header-carousel img');
-            slides[headerSlideIndex].classList.remove('active');
-            headerSlideIndex = (headerSlideIndex + n + slides.length) % slides.length;
-            slides[headerSlideIndex].classList.add('active');
-        }
-
-        // Iniciar el carrusel automáticamente
-        setInterval(() => changeHeaderSlide(1), 5000);
-
     </script>
 </body>
 </html>
