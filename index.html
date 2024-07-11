@@ -7,36 +7,26 @@
     <title>Puga League - Home</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Inline CSS minimized */
-        .header-carousel {position: relative; width: 100%; max-width: 1200px; margin: 1rem auto; overflow: hidden;}
-        .header-carousel img {width: 100%; display: none; transition: opacity 0.5s ease-in-out;}
-        .header-carousel img.active {display: block; opacity: 1;}
-        .header-carousel .prev, .header-carousel .next {position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 0.5rem; cursor: pointer; z-index: 1;}
-        .header-carousel .prev {left: 10px;}
-        .header-carousel .next {right: 10px;}
-        @media only screen and (max-width: 1200px) {.header-carousel .prev, .header-carousel .next {padding: 0.4rem;}}
-        @media only screen and (max-width: 992px) {.header-carousel {max-width: 900px;}}
-        @media only screen and (max-width: 768px) {.header-carousel .prev, .header-carousel .next {padding: 0.3rem;}}
-        @media only screen and (max-width: 576px) {.header-carousel .prev, .header-carousel .next {padding: 0.2rem;}}
-        @media only screen and (max-width: 480px) {.header-carousel {max-width: 100%;}}
-        .container {width: 90%; margin: 0 auto; max-width: 600px; align-content: center; padding: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;}
-        .section {background-color: rgb(58, 58, 58); margin-bottom: 2rem; padding: 1rem; align-content: center; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%;}
+        .header-carousel, .carousel {position: relative; width: 100%; margin: 1rem auto; overflow: hidden;}
+        .header-carousel img, .carousel img {width: 100%; display: none; transition: opacity 0.5s ease-in-out;}
+        .header-carousel img.active, .carousel img.active {display: block; opacity: 1;}
+        .header-carousel .prev, .header-carousel .next, .carousel .prev, .carousel .next {position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 0.5rem; cursor: pointer; z-index: 1;}
+        .header-carousel .prev, .carousel .prev {left: 10px;}
+        .header-carousel .next, .carousel .next {right: 10px;}
+        @media only screen and (max-width: 1200px) {.header-carousel .prev, .header-carousel .next, .carousel .prev, .carousel .next {padding: 0.4rem;}}
+        @media only screen and (max-width: 992px) {.header-carousel, .carousel {max-width: 900px;}}
+        @media only screen and (max-width: 768px) {.header-carousel .prev, .header-carousel .next, .carousel .prev, .carousel .next {padding: 0.3rem;}}
+        @media only screen and (max-width: 576px) {.header-carousel .prev, .header-carousel .next, .carousel .prev, .carousel .next {padding: 0.2rem;}}
+        @media only screen and (max-width: 480px) {.header-carousel, .carousel {max-width: 100%;}}
+        .container {width: 90%; margin: 0 auto; max-width: 600px; padding: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;}
+        .section {background-color: rgb(58, 58, 58); margin-bottom: 2rem; padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); width: 100%;}
         .section h2 {font-size: 1.3rem;}
         .section-content {display: flex; flex-wrap: wrap; justify-content: space-between;}
         img {max-width: 100%;}
-        .carousel {position: relative; max-width: 100%; margin: auto; overflow: hidden; margin-bottom: 2rem;}
-        .carousel img {width: 100%; display: none;}
-        .carousel img.active {display: block;}
-        .carousel .prev, .carousel .next {position: absolute; top: 50%; transform: translateY(-50%); background-color: rgb(0, 0, 0); color: white; border: none; padding: 1rem; cursor: pointer;}
-        .carousel .prev {left: 10px;}
-        .carousel .next {right: 10px;}
-        .section.events-section {background-color: rgb(58, 58, 58); margin-bottom: 2rem; padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
-        .section.events-section h2 {font-size: 1.3rem; color: #ffffff; margin-bottom: 1rem;}
-        .section.events-section .section-content {display: flex; flex-direction: column; gap: 1rem;}
-        .section.events-section .event {background-color: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); color: #ffffff;}
-        .section.events-section .event h3 {margin: 0 0 0.5rem 0;}
-        .section.events-section .countdown {font-size: 1.2rem; color: #ffcc00; text-align: center; margin-top: 1rem; background-color: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
-        @media only screen and (max-width: 768px) {.carousel .prev, .carousel .next {padding: 0.5rem;} .section.events-section {padding: 0.5rem;} .section.events-section h2 {font-size: 1.1rem;} .section.events-section .event {padding: 0.5rem;} .section.events-section .countdown {font-size: 1rem;}}
+        .events-section h2 {color: #ffffff;}
+        .events-section .event {background-color: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); color: #ffffff;}
+        .events-section .countdown {font-size: 1.2rem; color: #ffcc00; text-align: center; margin-top: 1rem; background-color: rgba(255, 255, 255, 0.1); padding: 1rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        @media only screen and (max-width: 768px) {.events-section {padding: 0.5rem;} .events-section h2 {font-size: 1.1rem;} .events-section .event {padding: 0.5rem;} .events-section .countdown {font-size: 1rem;}}
     </style>
 </head>
 <body>
@@ -124,31 +114,45 @@
     <script src="scripts.min.js" defer></script>
     <script>
         // Modal de bienvenida
-        var modal = document.getElementById('welcomeModal');
-        var span = document.getElementsByClassName("close")[0];
-        window.onload = function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            var modal = document.getElementById('welcomeModal');
+            var span = document.querySelector(".close");
             setTimeout(function() {
                 modal.style.display = "block";
             }, 3000);
-        };
-        span.onclick = function() {
-            modal.style.display = "none";
-        };
-        window.onclick = function(event) {
-            if (event.target == modal) {
+            span.onclick = function() {
                 modal.style.display = "none";
-            }
-        };
+            };
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        });
+
         // Carrusel de fotos
         let headerSlideIndex = 0;
-        function changeHeaderSlide(n) {
+        let autoSlideInterval;
+        const changeHeaderSlide = (n) => {
             let slides = document.querySelectorAll('.header-carousel img');
             slides[headerSlideIndex].classList.remove('active');
             headerSlideIndex = (headerSlideIndex + n + slides.length) % slides.length;
             slides[headerSlideIndex].classList.add('active');
-        }
-        // Iniciar el carrusel automáticamente
-        setInterval(() => changeHeaderSlide(1), 5000);
+        };
+
+        const startAutoSlide = () => {
+            autoSlideInterval = setInterval(() => changeHeaderSlide(1), 5000);
+        };
+
+        const stopAutoSlide = () => {
+            clearInterval(autoSlideInterval);
+        };
+
+        document.querySelector('.header-carousel').addEventListener('mouseover', stopAutoSlide);
+        document.querySelector('.header-carousel').addEventListener('mouseout', startAutoSlide);
+
+        startAutoSlide();
+
         // Contador
         const countdownDate = new Date('July 14, 2024 11:00:00').getTime();
         const countdown = document.getElementById('countdown');
