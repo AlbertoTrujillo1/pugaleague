@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido al virusero de Asier Martin</title>
+    <title>Error404</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Para simplificar las llamadas AJAX -->
 </head>
@@ -11,42 +11,23 @@
     <div id="contenido">
         <h1>Recuperando tu IP...</h1>
         <p id="mensaje"></p>
-        <img id="imagenHackeo" src="https://via.placeholder.com/300" alt="Imagen de hackeo" style="display:none; margin-top: 20px;">
+         <img id="imagenHackeo" src="imagey.jpg" alt="Imagen de hackeo" style="display:none; margin-top: 20px;">
     </div>
 
     <script>
         // Función para obtener la IP del usuario
         function obtenerIP() {
             $.getJSON('https://api.ipify.org?format=json', function(data) {
-                const ip = data.ip;
-
-                // Mostrar el mensaje de hackeo
+                // Una vez obtenida la IP, mostramos el mensaje
                 document.getElementById('mensaje').innerHTML = 
-                    "Te he hackeado. Tu dirección IP es: " + ip;
-                 <img id="imagenHackeo" src="imagey.jpg" alt="Imagen de hackeo" style="display:none; margin-top: 20px;">
+                    "Te he hackeado. Tu dirección IP es: " + data.ip;
                 
-                // Modificar el contenido principal para darle estilo de "hackeo"
-                document.querySelector("h1").textContent = "¡Asier Martin ahora tiene tu IP!";
+                // Modificamos el contenido principal para darle un estilo de "hackeo"
+                document.querySelector("h1").textContent = "Has caido en la trampa del nini!";
                 document.body.style.backgroundColor = "#000";
                 document.body.style.color = "#00FF00";  // Color verde de "pantalla de hackeo"
                 document.getElementById('contenido').style.textAlign = 'center';
                 document.getElementById('contenido').style.fontSize = '24px';
-
-                // Mostrar la imagen de hackeo
-                document.getElementById('imagenHackeo').style.display = 'block';
-
-                // Enviar la IP al backend (PHP) para guardarla
-                $.ajax({
-                    url: 'guardar_ip.php', // Archivo PHP que guarda la IP
-                    type: 'POST',
-                    data: { ip: ip },
-                    success: function(response) {
-                        console.log("IP guardada exitosamente");
-                    },
-                    error: function() {
-                        console.error("Error al guardar la IP");
-                    }
-                });
             });
         }
 
@@ -55,3 +36,4 @@
     </script>
 </body>
 </html>
+
