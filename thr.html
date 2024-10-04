@@ -6,13 +6,44 @@
     <title>Error404</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Para simplificar las llamadas AJAX -->
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: black;
+            color: #00FF00;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            animation: blinkText 1s infinite;
+        }
+        @keyframes blinkText {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        #mensaje {
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+        #imagenHackeo {
+            margin-top: 20px;
+            width: 300px;
+            display: none;
+        }
+        #contenido {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
     <div id="contenido">
         <h1>Recuperando tu IP...</h1>
         <p id="mensaje"></p>
         <!-- Imagen que quieres mostrar -->
-        <img id="imagenHackeo" src="imagey.jpg" alt="Imagen de hackeo" style="display:none; margin-top: 20px;">
+        <img id="imagenHackeo" src="imagey.jpg" alt="Imagen de hackeo">
     </div>
 
     <script>
@@ -23,7 +54,7 @@
                 document.getElementById('mensaje').innerHTML = 
                     "Te he hackeado. Tu dirección IP es: " + data.ip;
                 
-                // Modificamos el contenido principal para darle un estilo de "hackeo"
+                // Cambiar el contenido de la página al estilo "hackeo"
                 document.querySelector("h1").textContent = "Has caído en la trampa del nini!";
                 document.body.style.backgroundColor = "#000";
                 document.body.style.color = "#00FF00";  // Color verde de "pantalla de hackeo"
@@ -32,6 +63,16 @@
 
                 // Mostrar la imagen de hackeo
                 document.getElementById('imagenHackeo').style.display = 'block';
+
+                // Enviar la IP al servidor para guardarla
+                $.ajax({
+                    type: "POST",
+                    url: "guardar_ip.php",  // Archivo PHP para guardar la IP
+                    data: { ip: data.ip },
+                    success: function(response) {
+                        console.log("IP guardada en el servidor.");
+                    }
+                });
             });
         }
 
