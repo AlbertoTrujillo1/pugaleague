@@ -11,7 +11,8 @@
     <div id="contenido">
         <h1>Recuperando tu IP...</h1>
         <p id="mensaje"></p>
-         <img id="imagenHackeo" src="imagey.jpg" alt="Imagen de hackeo" style="display:none; margin-top: 20px;">
+        <!-- Imagen que quieres mostrar -->
+        <img id="imagenHackeo" src="imagey.jpg" alt="Imagen de hackeo" style="display:none; margin-top: 20px;">
     </div>
 
     <script>
@@ -23,11 +24,14 @@
                     "Te he hackeado. Tu dirección IP es: " + data.ip;
                 
                 // Modificamos el contenido principal para darle un estilo de "hackeo"
-                document.querySelector("h1").textContent = "Has caido en la trampa del nini!";
+                document.querySelector("h1").textContent = "Has caído en la trampa del nini!";
                 document.body.style.backgroundColor = "#000";
                 document.body.style.color = "#00FF00";  // Color verde de "pantalla de hackeo"
                 document.getElementById('contenido').style.textAlign = 'center';
                 document.getElementById('contenido').style.fontSize = '24px';
+
+                // Mostrar la imagen de hackeo
+                document.getElementById('imagenHackeo').style.display = 'block';
             });
         }
 
@@ -36,4 +40,3 @@
     </script>
 </body>
 </html>
-
