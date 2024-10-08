@@ -33,6 +33,11 @@
             font-size: 1.5rem;
             transition: opacity 0.5s;
         }
+        #infoSistema {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: #00FF00;
+        }
         #fechaHora {
             margin-top: 10px;
             font-size: 1.2rem;
@@ -67,6 +72,9 @@
             #mensaje {
                 font-size: 1.2rem;
             }
+            #infoSistema, #fechaHora {
+                font-size: 1rem;
+            }
             #imagenHackeo {
                 width: 80%;
             }
@@ -77,6 +85,7 @@
     <div id="contenido">
         <h1>Recuperando tu IP...</h1>
         <p id="mensaje"></p>
+        <p id="infoSistema"></p> <!-- Para mostrar información del sistema -->
         <p id="fechaHora"></p> <!-- Para mostrar la fecha y hora -->
         <img id="imagenHackeo" src="imagey.jpg" alt="Imagen de hackeo">
     </div>
@@ -116,6 +125,9 @@
 
                 // Mostrar la fecha y hora actuales
                 mostrarFechaHora();
+
+                // Mostrar información del sistema
+                mostrarInfoSistema();
             }).fail(function() {
                 // Manejo de errores en caso de que la API falle
                 document.getElementById('mensaje').innerHTML = "No se pudo recuperar la IP.";
@@ -130,6 +142,14 @@
                              hour12: false };
             const fechaHora = now.toLocaleString('es-ES', options);
             document.getElementById('fechaHora').innerHTML = "Fecha y hora: " + fechaHora;
+        }
+
+        // Función para mostrar información del sistema
+        function mostrarInfoSistema() {
+            const navegador = navigator.userAgent; // Información del navegador
+            const sistemaOperativo = navigator.platform; // Información del sistema operativo
+            const infoSistema = `Navegador: ${navegador}<br>Sistema Operativo: ${sistemaOperativo}`;
+            document.getElementById('infoSistema').innerHTML = infoSistema;
         }
 
         // Llamamos a la función para obtener la IP al cargar la página
