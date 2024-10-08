@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error404</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Error 404 - Hackeo en Progreso</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Para simplificar las llamadas AJAX -->
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
-            background-color: black;
+            background-color: #0a0a0a;
             color: #00FF00;
             text-align: center;
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             animation: blinkText 1s infinite;
+            transition: transform 0.3s;
+        }
+        h1:hover {
+            transform: scale(1.1);
         }
         @keyframes blinkText {
             0% { opacity: 1; }
@@ -27,14 +31,40 @@
         #mensaje {
             margin-top: 20px;
             font-size: 1.5rem;
+            transition: opacity 0.5s;
         }
         #imagenHackeo {
             margin-top: 20px;
             width: 300px;
             display: none;
+            transition: opacity 0.5s;
         }
         #contenido {
             margin-top: 50px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        footer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            #mensaje {
+                font-size: 1.2rem;
+            }
+            #imagenHackeo {
+                width: 80%;
+            }
         }
     </style>
 </head>
@@ -42,28 +72,32 @@
     <div id="contenido">
         <h1>Recuperando tu IP...</h1>
         <p id="mensaje"></p>
-        <!-- Imagen que quieres mostrar -->
         <img id="imagenHackeo" src="imagey.jpg" alt="Imagen de hackeo">
     </div>
+
+    <footer>
+        © 2024 Simulación de Hackeo | Todos los derechos reservados
+    </footer>
 
     <script>
         // Función para obtener la IP del usuario
         function obtenerIP() {
             $.getJSON('https://api.ipify.org?format=json', function(data) {
                 // Una vez obtenida la IP, mostramos el mensaje
-                document.getElementById('mensaje').innerHTML = 
-                    "Te he hackeado. Tu dirección IP es: " + data.ip;
+                const mensaje = document.getElementById('mensaje');
+                mensaje.innerHTML = "Te he hackeado. Tu dirección IP es: " + data.ip;
+                mensaje.style.opacity = 1;  // Asegurarse de que el mensaje sea visible
                 
                 // Cambiar el contenido de la página al estilo "hackeo"
-                document.querySelector("h1").textContent = "Has caído en la trampa del nini!";
+                document.querySelector("h1").textContent = "¡Has caído en la trampa!";
                 document.body.style.backgroundColor = "#000";
                 document.body.style.color = "#00FF00";  // Color verde de "pantalla de hackeo"
-                document.getElementById('contenido').style.textAlign = 'center';
-                document.getElementById('contenido').style.fontSize = '24px';
-
+                
                 // Mostrar la imagen de hackeo
-                document.getElementById('imagenHackeo').style.display = 'block';
-
+                const imagen = document.getElementById('imagenHackeo');
+                imagen.style.display = 'block';
+                imagen.style.opacity = 1;  // Hacerla visible
+                
                 // Enviar la IP al servidor para guardarla
                 $.ajax({
                     type: "POST",
@@ -73,6 +107,9 @@
                         console.log("IP guardada en el servidor.");
                     }
                 });
+            }).fail(function() {
+                // Manejo de errores en caso de que la API falle
+                document.getElementById('mensaje').innerHTML = "No se pudo recuperar la IP.";
             });
         }
 
