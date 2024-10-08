@@ -1,15 +1,21 @@
 <?php
+session_start();
+require 'auth.php'; // Incluimos el archivo de autenticación
+
+if (!isAuthenticated()) {
+    header("Location: login.html"); // Redirigir si no está autenticado
+    exit;
+}
+
 if (isset($_POST['ip'])) {
     $ip = $_POST['ip'];
-    $archivo = 'ips_guardadas.txt';
+    $file = 'ips.txt';
+    $current = file_get_contents($file);
+    $current .= $ip . "\n";
+    file_put_contents($file, $current);
     
-    // Guardar la IP en el archivo
-    $file = fopen($archivo, 'a');
-    fwrite($file, $ip . " - " . date("Y-m-d H:i:s") . "\n");
-    fclose($file);
-    
-    echo "IP guardada correctamente";
+    echo "IP guardada correctamente.";
 } else {
-    echo "No se recibió ninguna IP";
+    echo "No se recibió ninguna IP.";
 }
 ?>
