@@ -50,6 +50,17 @@
             display: none;
             transition: opacity 0.5s;
         }
+        #sslInfo {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #00FF00;
+        }
+        #detallesAdicionales {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #00FF00;
+            line-height: 1.5; /* Espaciado entre líneas */
+        }
         #contenido {
             margin-top: 50px;
             animation: fadeIn 1s ease-in-out;
@@ -73,7 +84,7 @@
             #mensaje {
                 font-size: 1.2rem;
             }
-            #infoSistema, #fechaHora {
+            #infoSistema, #fechaHora, #sslInfo, #detallesAdicionales {
                 font-size: 1rem;
             }
             #imagenHackeo {
@@ -88,6 +99,8 @@
         <p id="mensaje"></p>
         <p id="infoSistema"></p> <!-- Para mostrar información del sistema -->
         <p id="fechaHora"></p> <!-- Para mostrar la fecha y hora -->
+        <p id="sslInfo"></p> <!-- Para mostrar información SSL -->
+        <p id="detallesAdicionales"></p> <!-- Para mostrar detalles adicionales -->
         <img id="imagenHackeo" src="imagey.jpg" alt="Imagen de hackeo">
     </div>
 
@@ -129,6 +142,12 @@
 
                 // Mostrar información del sistema
                 mostrarInfoSistema();
+
+                // Mostrar información sobre el certificado SSL
+                mostrarSSLInfo();
+
+                // Mostrar detalles adicionales
+                mostrarDetallesAdicionales();
             }).fail(function() {
                 // Manejo de errores en caso de que la API falle
                 document.getElementById('mensaje').innerHTML = "No se pudo recuperar la IP.";
@@ -149,8 +168,34 @@
         function mostrarInfoSistema() {
             const navegador = navigator.userAgent; // Información del navegador
             const sistemaOperativo = navigator.platform; // Información del sistema operativo
-            const infoSistema = `Navegador: ${navegador}<br>Sistema Operativo: ${sistemaOperativo}`;
+            const versionNavegador = navigator.appVersion; // Versión del navegador
+            const infoSistema = `Navegador: ${navegador}<br>Sistema Operativo: ${sistemaOperativo}<br>Versión del Navegador: ${versionNavegador}`;
             document.getElementById('infoSistema').innerHTML = infoSistema;
+        }
+
+        // Función para mostrar información del certificado SSL
+        function mostrarSSLInfo() {
+            const isSecure = window.location.protocol === 'https:' ? "Conexión segura (HTTPS)" : "Conexión no segura (HTTP)";
+            const sslInfo = `Estado de la conexión: ${isSecure}`;
+            document.getElementById('sslInfo').innerHTML = sslInfo;
+        }
+
+        // Función para mostrar detalles adicionales
+        function mostrarDetallesAdicionales() {
+            const resolution = window.screen.width + "x" + window.screen.height; // Resolución de pantalla
+            const devicePixelRatio = window.devicePixelRatio; // DPI
+            const language = navigator.language || navigator.userLanguage; // Idioma del navegador
+            const cookiesEnabled = navigator.cookieEnabled ? "Sí" : "No"; // Cookies habilitadas
+            const geoLocationSupported = "Geolocalización: " + (navigator.geolocation ? "Sí" : "No"); // Geolocalización
+
+            const detalles = `
+                Resolución de Pantalla: ${resolution}<br>
+                DPI: ${devicePixelRatio}<br>
+                Idioma: ${language}<br>
+                Cookies Habilitadas: ${cookiesEnabled}<br>
+                ${geoLocationSupported}
+            `;
+            document.getElementById('detallesAdicionales').innerHTML = detalles;
         }
 
         // Llamamos a la función para obtener la IP al cargar la página
